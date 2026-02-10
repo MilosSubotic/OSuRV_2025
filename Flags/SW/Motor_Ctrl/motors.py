@@ -33,7 +33,9 @@ class MotorState:
 if IFACE == 'GPIO':
     N_MOTORS = 1
 elif IFACE == 'I2C':
-    N_MOTORS = 20
+    # Motors 10-19 do not work because bug on PCB with I2C addrs.
+    #N_MOTORS = 20
+    N_MOTORS = 10
 
 # 28BYJ-48
 # 2ms/step

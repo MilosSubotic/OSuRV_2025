@@ -16,21 +16,21 @@ motor_state = MotorState(
 )
 motors_driver = MotorsDriver()
 
+motor_number = 0
 
-'''
 # Move 0th motor
 motor_state.angle = 300.0
 motor_state.velocity = 25.0
-motors_driver.update(0, motor_state)
+motors_driver.update(motor_number, motor_state)
 time.sleep(1)
 
 motor_state.angle = 0.0
 motor_state.velocity = 10.0
-motors_driver.update(0, motor_state)
+motors_driver.update(motor_number, motor_state)
 time.sleep(1)
+
+
 '''
-
-
 # Move all 20 motors
 for i in range(20):
     motor_state.angle = 300.0
@@ -43,6 +43,6 @@ for i in range(20):
     motor_state.velocity = 10.0
     motors_driver.update(i, motor_state)
 time.sleep(1)
-
+'''
 
 print('End')
