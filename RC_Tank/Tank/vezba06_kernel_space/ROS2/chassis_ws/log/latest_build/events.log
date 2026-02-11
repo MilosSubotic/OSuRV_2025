@@ -1,0 +1,952 @@
+[0.000000] (-) TimerEvent: {}
+[0.004664] (wc_bridge) JobQueued: {'identifier': 'wc_bridge', 'dependencies': OrderedDict()}
+[0.005249] (wc_main) JobQueued: {'identifier': 'wc_main', 'dependencies': OrderedDict()}
+[0.005623] (wc_bridge) JobStarted: {'identifier': 'wc_bridge'}
+[0.088785] (wc_main) JobStarted: {'identifier': 'wc_main'}
+[0.095613] (-) TimerEvent: {}
+[0.146951] (wc_bridge) JobProgress: {'identifier': 'wc_bridge', 'progress': 'cmake'}
+[0.165641] (wc_bridge) Command: {'cmd': ['/usr/bin/cmake', '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/src/wc_bridge', '-DCMAKE_INSTALL_PREFIX=/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge'], 'cwd': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'rtrk-tenk', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'HOME': '/home/rtrk-tenk', 'OLDPWD': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '1637', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=b05c830e2df34bb35e2815a0698a37ba', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'rtrk-tenk', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\\x2dsession\\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'rtrk-tenk', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/rtrktenk-desktop:@/tmp/.ICE-unix/1637,unix/rtrktenk-desktop:/tmp/.ICE-unix/1637', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/ba295cf0_4c9b_4e0c_afcd_3111c7fdfbc5', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.76Q7J3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.145', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=b05c830e2df34bb35e2815a0698a37ba', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main:/opt/ros/jazzy'}), 'shell': False}
+[0.201488] (-) TimerEvent: {}
+[0.234163] (wc_main) JobProgress: {'identifier': 'wc_main', 'progress': 'cmake'}
+[0.255974] (wc_main) Command: {'cmd': ['/usr/bin/cmake', '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/src/wc_main', '-DCMAKE_INSTALL_PREFIX=/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main'], 'cwd': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_main', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'rtrk-tenk', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'HOME': '/home/rtrk-tenk', 'OLDPWD': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '1637', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=b05c830e2df34bb35e2815a0698a37ba', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'rtrk-tenk', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\\x2dsession\\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'rtrk-tenk', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/rtrktenk-desktop:@/tmp/.ICE-unix/1637,unix/rtrktenk-desktop:/tmp/.ICE-unix/1637', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/ba295cf0_4c9b_4e0c_afcd_3111c7fdfbc5', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.76Q7J3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.145', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_main', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=b05c830e2df34bb35e2815a0698a37ba', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main:/opt/ros/jazzy'}), 'shell': False}
+[0.302843] (-) TimerEvent: {}
+[0.411890] (-) TimerEvent: {}
+[0.523407] (-) TimerEvent: {}
+[0.625191] (-) TimerEvent: {}
+[0.726010] (-) TimerEvent: {}
+[0.826824] (-) TimerEvent: {}
+[0.927633] (-) TimerEvent: {}
+[1.030177] (-) TimerEvent: {}
+[1.138417] (-) TimerEvent: {}
+[1.246710] (-) TimerEvent: {}
+[1.352839] (-) TimerEvent: {}
+[1.458845] (-) TimerEvent: {}
+[1.564420] (-) TimerEvent: {}
+[1.593698] (wc_bridge) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[1.665242] (-) TimerEvent: {}
+[1.689858] (wc_main) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[1.776391] (-) TimerEvent: {}
+[1.895819] (-) TimerEvent: {}
+[2.001919] (-) TimerEvent: {}
+[2.104356] (-) TimerEvent: {}
+[2.225013] (-) TimerEvent: {}
+[2.340131] (-) TimerEvent: {}
+[2.456384] (-) TimerEvent: {}
+[2.557936] (-) TimerEvent: {}
+[2.666740] (-) TimerEvent: {}
+[2.769099] (-) TimerEvent: {}
+[2.795528] (wc_main) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[2.812523] (wc_bridge) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[2.869278] (-) TimerEvent: {}
+[2.970243] (-) TimerEvent: {}
+[2.977057] (wc_main) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[2.986719] (wc_bridge) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[3.070759] (-) TimerEvent: {}
+[3.172847] (-) TimerEvent: {}
+[3.274726] (-) TimerEvent: {}
+[3.376196] (-) TimerEvent: {}
+[3.477476] (-) TimerEvent: {}
+[3.581012] (-) TimerEvent: {}
+[3.683008] (-) TimerEvent: {}
+[3.785982] (-) TimerEvent: {}
+[3.888129] (-) TimerEvent: {}
+[3.995930] (-) TimerEvent: {}
+[4.101060] (-) TimerEvent: {}
+[4.162358] (wc_main) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[4.202757] (-) TimerEvent: {}
+[4.237586] (wc_bridge) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[4.253041] (wc_main) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[4.260410] (wc_main) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[4.269205] (wc_main) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[4.303708] (-) TimerEvent: {}
+[4.334456] (wc_bridge) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[4.342941] (wc_bridge) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[4.343960] (wc_bridge) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[4.374098] (wc_main) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[4.404139] (-) TimerEvent: {}
+[4.426185] (wc_bridge) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[4.504433] (-) TimerEvent: {}
+[4.605743] (-) TimerEvent: {}
+[4.707327] (-) TimerEvent: {}
+[4.817023] (-) TimerEvent: {}
+[4.920600] (-) TimerEvent: {}
+[5.026883] (-) TimerEvent: {}
+[5.130657] (-) TimerEvent: {}
+[5.236270] (-) TimerEvent: {}
+[5.339836] (-) TimerEvent: {}
+[5.452695] (-) TimerEvent: {}
+[5.566288] (-) TimerEvent: {}
+[5.656696] (wc_bridge) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[5.667292] (-) TimerEvent: {}
+[5.671195] (wc_main) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[5.744385] (wc_main) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[5.749821] (wc_bridge) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[5.759351] (wc_main) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[5.762470] (wc_bridge) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[5.771261] (-) TimerEvent: {}
+[5.772068] (wc_bridge) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[5.773083] (wc_main) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[5.817728] (wc_main) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[5.818846] (wc_bridge) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[5.871494] (-) TimerEvent: {}
+[5.972997] (-) TimerEvent: {}
+[6.079378] (-) TimerEvent: {}
+[6.180764] (-) TimerEvent: {}
+[6.283003] (-) TimerEvent: {}
+[6.386646] (-) TimerEvent: {}
+[6.487767] (-) TimerEvent: {}
+[6.592295] (-) TimerEvent: {}
+[6.701290] (-) TimerEvent: {}
+[6.802861] (-) TimerEvent: {}
+[6.906713] (-) TimerEvent: {}
+[7.008081] (-) TimerEvent: {}
+[7.109936] (-) TimerEvent: {}
+[7.212299] (-) TimerEvent: {}
+[7.231672] (wc_main) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[7.239567] (wc_bridge) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[7.312459] (-) TimerEvent: {}
+[7.415038] (-) TimerEvent: {}
+[7.519097] (-) TimerEvent: {}
+[7.621981] (-) TimerEvent: {}
+[7.726011] (-) TimerEvent: {}
+[7.827641] (-) TimerEvent: {}
+[7.928751] (-) TimerEvent: {}
+[8.030370] (-) TimerEvent: {}
+[8.149684] (-) TimerEvent: {}
+[8.256454] (-) TimerEvent: {}
+[8.362042] (-) TimerEvent: {}
+[8.465872] (-) TimerEvent: {}
+[8.568673] (-) TimerEvent: {}
+[8.669620] (-) TimerEvent: {}
+[8.772683] (-) TimerEvent: {}
+[8.779821] (wc_main) StdoutLine: {'line': b'-- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[8.786727] (wc_bridge) StdoutLine: {'line': b'-- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[8.877988] (-) TimerEvent: {}
+[8.987050] (-) TimerEvent: {}
+[9.088575] (-) TimerEvent: {}
+[9.191958] (-) TimerEvent: {}
+[9.299444] (-) TimerEvent: {}
+[9.376017] (wc_main) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[9.403839] (-) TimerEvent: {}
+[9.408169] (wc_bridge) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[9.505117] (-) TimerEvent: {}
+[9.545919] (wc_main) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[9.587165] (wc_bridge) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[9.606132] (-) TimerEvent: {}
+[9.708868] (-) TimerEvent: {}
+[9.774867] (wc_main) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[9.775783] (wc_bridge) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[9.808937] (-) TimerEvent: {}
+[9.909668] (-) TimerEvent: {}
+[9.961306] (wc_main) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[9.965742] (wc_bridge) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[10.009863] (-) TimerEvent: {}
+[10.110624] (-) TimerEvent: {}
+[10.211359] (-) TimerEvent: {}
+[10.312170] (-) TimerEvent: {}
+[10.413112] (-) TimerEvent: {}
+[10.514057] (-) TimerEvent: {}
+[10.614810] (-) TimerEvent: {}
+[10.640800] (wc_main) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[10.642065] (wc_bridge) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[10.673259] (wc_main) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[10.674100] (wc_bridge) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[10.715014] (-) TimerEvent: {}
+[10.815895] (-) TimerEvent: {}
+[10.916678] (-) TimerEvent: {}
+[11.019901] (-) TimerEvent: {}
+[11.120741] (-) TimerEvent: {}
+[11.221640] (-) TimerEvent: {}
+[11.322576] (-) TimerEvent: {}
+[11.382143] (wc_main) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[11.383785] (wc_bridge) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[11.422770] (-) TimerEvent: {}
+[11.521182] (wc_bridge) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[11.522659] (wc_main) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[11.523475] (-) TimerEvent: {}
+[11.624645] (-) TimerEvent: {}
+[11.716213] (wc_main) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[11.734027] (-) TimerEvent: {}
+[11.742647] (wc_bridge) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[11.834283] (-) TimerEvent: {}
+[11.938296] (-) TimerEvent: {}
+[12.042681] (-) TimerEvent: {}
+[12.145011] (-) TimerEvent: {}
+[12.248903] (-) TimerEvent: {}
+[12.354114] (-) TimerEvent: {}
+[12.438797] (wc_main) StdoutLine: {'line': b'-- Found ackermann_msgs: 2.0.2 (/opt/ros/jazzy/share/ackermann_msgs/cmake)\n'}
+[12.454235] (-) TimerEvent: {}
+[12.454943] (wc_bridge) StdoutLine: {'line': b'-- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)\n'}
+[12.554623] (-) TimerEvent: {}
+[12.655830] (-) TimerEvent: {}
+[12.757771] (-) TimerEvent: {}
+[12.786638] (wc_bridge) StdoutLine: {'line': b'-- Found ackermann_msgs: 2.0.2 (/opt/ros/jazzy/share/ackermann_msgs/cmake)\n'}
+[12.860982] (-) TimerEvent: {}
+[12.970182] (-) TimerEvent: {}
+[12.994410] (wc_bridge) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.4 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[13.071231] (-) TimerEvent: {}
+[13.176707] (-) TimerEvent: {}
+[13.278313] (-) TimerEvent: {}
+[13.380879] (-) TimerEvent: {}
+[13.483153] (-) TimerEvent: {}
+[13.588245] (-) TimerEvent: {}
+[13.697222] (-) TimerEvent: {}
+[13.808554] (-) TimerEvent: {}
+[13.914053] (-) TimerEvent: {}
+[14.020074] (-) TimerEvent: {}
+[14.049618] (wc_main) StdoutLine: {'line': b'-- Configuring done (13.7s)\n'}
+[14.121208] (-) TimerEvent: {}
+[14.229131] (-) TimerEvent: {}
+[14.272342] (wc_main) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[14.312102] (wc_main) StdoutLine: {'line': b'-- Build files have been written to: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_main\n'}
+[14.330244] (-) TimerEvent: {}
+[14.401875] (wc_main) CommandEnded: {'returncode': 0}
+[14.425636] (wc_main) JobProgress: {'identifier': 'wc_main', 'progress': 'build'}
+[14.425797] (wc_main) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_main', '--', '-j4', '-l4'], 'cwd': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_main', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'rtrk-tenk', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'HOME': '/home/rtrk-tenk', 'OLDPWD': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '1637', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=b05c830e2df34bb35e2815a0698a37ba', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'rtrk-tenk', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\\x2dsession\\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'rtrk-tenk', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/rtrktenk-desktop:@/tmp/.ICE-unix/1637,unix/rtrktenk-desktop:/tmp/.ICE-unix/1637', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/ba295cf0_4c9b_4e0c_afcd_3111c7fdfbc5', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.76Q7J3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.145', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_main', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=b05c830e2df34bb35e2815a0698a37ba', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main:/opt/ros/jazzy'}), 'shell': False}
+[14.436607] (-) TimerEvent: {}
+[14.477608] (wc_bridge) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[14.488491] (wc_bridge) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[14.496071] (wc_bridge) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[14.497957] (wc_bridge) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[14.520720] (wc_bridge) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[14.522201] (wc_bridge) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[14.527702] (wc_bridge) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[14.537389] (-) TimerEvent: {}
+[14.558923] (wc_bridge) StdoutLine: {'line': b'-- Configuring done (14.2s)\n'}
+[14.637833] (-) TimerEvent: {}
+[14.692188] (wc_bridge) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[14.740393] (-) TimerEvent: {}
+[14.771692] (wc_bridge) StdoutLine: {'line': b'-- Build files have been written to: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge\n'}
+[14.848843] (-) TimerEvent: {}
+[14.880759] (wc_bridge) CommandEnded: {'returncode': 0}
+[14.895828] (wc_bridge) JobProgress: {'identifier': 'wc_bridge', 'progress': 'build'}
+[14.895997] (wc_bridge) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge', '--', '-j4', '-l4'], 'cwd': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'rtrk-tenk', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'HOME': '/home/rtrk-tenk', 'OLDPWD': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '1637', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=b05c830e2df34bb35e2815a0698a37ba', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'rtrk-tenk', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\\x2dsession\\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'rtrk-tenk', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/rtrktenk-desktop:@/tmp/.ICE-unix/1637,unix/rtrktenk-desktop:/tmp/.ICE-unix/1637', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/ba295cf0_4c9b_4e0c_afcd_3111c7fdfbc5', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.76Q7J3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.145', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=b05c830e2df34bb35e2815a0698a37ba', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main:/opt/ros/jazzy'}), 'shell': False}
+[14.952390] (-) TimerEvent: {}
+[15.040202] (wc_main) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/simple_ackermann_controller.dir/src/SerialCPP.cpp.o\x1b[0m\n'}
+[15.054144] (wc_main) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/simple_ackermann_controller.dir/src/simple_ackermann_steering_controller.cpp.o\x1b[0m\n'}
+[15.056161] (-) TimerEvent: {}
+[15.161012] (-) TimerEvent: {}
+[15.264732] (-) TimerEvent: {}
+[15.366854] (-) TimerEvent: {}
+[15.474808] (-) TimerEvent: {}
+[15.576717] (-) TimerEvent: {}
+[15.609764] (wc_bridge) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/twist_to_ackermann.dir/src/twist_to_ackermann.cpp.o\x1b[0m\n'}
+[15.676914] (-) TimerEvent: {}
+[15.779694] (-) TimerEvent: {}
+[15.882681] (-) TimerEvent: {}
+[15.983741] (-) TimerEvent: {}
+[16.087035] (-) TimerEvent: {}
+[16.191953] (-) TimerEvent: {}
+[16.292925] (-) TimerEvent: {}
+[16.394556] (-) TimerEvent: {}
+[16.495717] (-) TimerEvent: {}
+[16.597775] (-) TimerEvent: {}
+[16.699104] (-) TimerEvent: {}
+[16.800331] (-) TimerEvent: {}
+[16.904190] (-) TimerEvent: {}
+[17.005670] (-) TimerEvent: {}
+[17.107162] (-) TimerEvent: {}
+[17.207954] (-) TimerEvent: {}
+[17.312024] (-) TimerEvent: {}
+[17.415013] (-) TimerEvent: {}
+[17.517683] (-) TimerEvent: {}
+[17.618440] (-) TimerEvent: {}
+[17.720171] (-) TimerEvent: {}
+[17.821792] (-) TimerEvent: {}
+[17.922681] (-) TimerEvent: {}
+[18.024746] (-) TimerEvent: {}
+[18.125825] (-) TimerEvent: {}
+[18.228686] (-) TimerEvent: {}
+[18.329603] (-) TimerEvent: {}
+[18.431459] (-) TimerEvent: {}
+[18.532718] (-) TimerEvent: {}
+[18.634761] (-) TimerEvent: {}
+[18.738467] (-) TimerEvent: {}
+[18.843634] (-) TimerEvent: {}
+[18.948789] (-) TimerEvent: {}
+[19.053307] (-) TimerEvent: {}
+[19.161760] (-) TimerEvent: {}
+[19.265750] (-) TimerEvent: {}
+[19.374874] (-) TimerEvent: {}
+[19.476072] (-) TimerEvent: {}
+[19.580848] (-) TimerEvent: {}
+[19.682241] (-) TimerEvent: {}
+[19.787462] (-) TimerEvent: {}
+[19.889149] (-) TimerEvent: {}
+[19.993666] (-) TimerEvent: {}
+[20.102912] (-) TimerEvent: {}
+[20.204070] (-) TimerEvent: {}
+[20.310651] (-) TimerEvent: {}
+[20.420234] (-) TimerEvent: {}
+[20.523367] (-) TimerEvent: {}
+[20.628124] (-) TimerEvent: {}
+[20.730758] (-) TimerEvent: {}
+[20.835175] (-) TimerEvent: {}
+[20.938919] (-) TimerEvent: {}
+[21.041728] (-) TimerEvent: {}
+[21.145308] (-) TimerEvent: {}
+[21.248623] (-) TimerEvent: {}
+[21.360352] (-) TimerEvent: {}
+[21.463872] (-) TimerEvent: {}
+[21.568592] (-) TimerEvent: {}
+[21.673349] (-) TimerEvent: {}
+[21.783276] (-) TimerEvent: {}
+[21.884775] (-) TimerEvent: {}
+[21.988738] (-) TimerEvent: {}
+[22.090849] (-) TimerEvent: {}
+[22.195480] (-) TimerEvent: {}
+[22.302737] (-) TimerEvent: {}
+[22.404042] (-) TimerEvent: {}
+[22.505130] (-) TimerEvent: {}
+[22.611641] (-) TimerEvent: {}
+[22.714786] (-) TimerEvent: {}
+[22.825285] (-) TimerEvent: {}
+[22.936923] (-) TimerEvent: {}
+[23.046372] (-) TimerEvent: {}
+[23.159870] (-) TimerEvent: {}
+[23.262937] (-) TimerEvent: {}
+[23.369301] (-) TimerEvent: {}
+[23.477788] (-) TimerEvent: {}
+[23.585662] (-) TimerEvent: {}
+[23.691778] (-) TimerEvent: {}
+[23.793055] (-) TimerEvent: {}
+[23.894305] (-) TimerEvent: {}
+[23.995331] (-) TimerEvent: {}
+[24.096257] (-) TimerEvent: {}
+[24.197296] (-) TimerEvent: {}
+[24.298410] (-) TimerEvent: {}
+[24.399696] (-) TimerEvent: {}
+[24.500621] (-) TimerEvent: {}
+[24.601442] (-) TimerEvent: {}
+[24.702306] (-) TimerEvent: {}
+[24.803237] (-) TimerEvent: {}
+[24.904129] (-) TimerEvent: {}
+[25.005095] (-) TimerEvent: {}
+[25.106563] (-) TimerEvent: {}
+[25.207458] (-) TimerEvent: {}
+[25.308295] (-) TimerEvent: {}
+[25.409204] (-) TimerEvent: {}
+[25.510100] (-) TimerEvent: {}
+[25.611035] (-) TimerEvent: {}
+[25.711948] (-) TimerEvent: {}
+[25.812729] (-) TimerEvent: {}
+[25.913673] (-) TimerEvent: {}
+[26.014664] (-) TimerEvent: {}
+[26.115633] (-) TimerEvent: {}
+[26.216432] (-) TimerEvent: {}
+[26.317317] (-) TimerEvent: {}
+[26.418429] (-) TimerEvent: {}
+[26.519581] (-) TimerEvent: {}
+[26.620405] (-) TimerEvent: {}
+[26.721349] (-) TimerEvent: {}
+[26.822371] (-) TimerEvent: {}
+[26.923581] (-) TimerEvent: {}
+[27.024589] (-) TimerEvent: {}
+[27.125402] (-) TimerEvent: {}
+[27.226294] (-) TimerEvent: {}
+[27.327178] (-) TimerEvent: {}
+[27.428067] (-) TimerEvent: {}
+[27.528991] (-) TimerEvent: {}
+[27.629966] (-) TimerEvent: {}
+[27.730829] (-) TimerEvent: {}
+[27.831653] (-) TimerEvent: {}
+[27.932592] (-) TimerEvent: {}
+[28.033453] (-) TimerEvent: {}
+[28.134390] (-) TimerEvent: {}
+[28.235276] (-) TimerEvent: {}
+[28.336156] (-) TimerEvent: {}
+[28.437076] (-) TimerEvent: {}
+[28.538004] (-) TimerEvent: {}
+[28.638891] (-) TimerEvent: {}
+[28.739862] (-) TimerEvent: {}
+[28.841009] (-) TimerEvent: {}
+[28.941951] (-) TimerEvent: {}
+[29.042810] (-) TimerEvent: {}
+[29.143709] (-) TimerEvent: {}
+[29.244680] (-) TimerEvent: {}
+[29.345458] (-) TimerEvent: {}
+[29.446317] (-) TimerEvent: {}
+[29.547252] (-) TimerEvent: {}
+[29.648211] (-) TimerEvent: {}
+[29.749118] (-) TimerEvent: {}
+[29.850077] (-) TimerEvent: {}
+[29.951065] (-) TimerEvent: {}
+[30.052013] (-) TimerEvent: {}
+[30.153066] (-) TimerEvent: {}
+[30.253973] (-) TimerEvent: {}
+[30.354878] (-) TimerEvent: {}
+[30.455741] (-) TimerEvent: {}
+[30.556685] (-) TimerEvent: {}
+[30.657615] (-) TimerEvent: {}
+[30.758662] (-) TimerEvent: {}
+[30.859813] (-) TimerEvent: {}
+[30.960837] (-) TimerEvent: {}
+[31.061843] (-) TimerEvent: {}
+[31.162828] (-) TimerEvent: {}
+[31.263915] (-) TimerEvent: {}
+[31.365008] (-) TimerEvent: {}
+[31.466080] (-) TimerEvent: {}
+[31.569201] (-) TimerEvent: {}
+[31.670160] (-) TimerEvent: {}
+[31.771045] (-) TimerEvent: {}
+[31.871955] (-) TimerEvent: {}
+[31.972848] (-) TimerEvent: {}
+[32.073688] (-) TimerEvent: {}
+[32.174555] (-) TimerEvent: {}
+[32.275461] (-) TimerEvent: {}
+[32.376346] (-) TimerEvent: {}
+[32.477287] (-) TimerEvent: {}
+[32.578190] (-) TimerEvent: {}
+[32.679139] (-) TimerEvent: {}
+[32.780165] (-) TimerEvent: {}
+[32.881364] (-) TimerEvent: {}
+[32.982301] (-) TimerEvent: {}
+[33.083250] (-) TimerEvent: {}
+[33.184147] (-) TimerEvent: {}
+[33.285065] (-) TimerEvent: {}
+[33.385983] (-) TimerEvent: {}
+[33.486917] (-) TimerEvent: {}
+[33.587765] (-) TimerEvent: {}
+[33.688680] (-) TimerEvent: {}
+[33.789551] (-) TimerEvent: {}
+[33.890422] (-) TimerEvent: {}
+[33.991386] (-) TimerEvent: {}
+[34.092255] (-) TimerEvent: {}
+[34.193175] (-) TimerEvent: {}
+[34.295989] (-) TimerEvent: {}
+[34.396874] (-) TimerEvent: {}
+[34.497712] (-) TimerEvent: {}
+[34.598666] (-) TimerEvent: {}
+[34.699670] (-) TimerEvent: {}
+[34.800594] (-) TimerEvent: {}
+[34.901428] (-) TimerEvent: {}
+[35.002309] (-) TimerEvent: {}
+[35.103262] (-) TimerEvent: {}
+[35.206976] (-) TimerEvent: {}
+[35.307885] (-) TimerEvent: {}
+[35.408727] (-) TimerEvent: {}
+[35.509596] (-) TimerEvent: {}
+[35.610443] (-) TimerEvent: {}
+[35.711333] (-) TimerEvent: {}
+[35.812606] (-) TimerEvent: {}
+[35.913948] (-) TimerEvent: {}
+[36.015166] (-) TimerEvent: {}
+[36.116138] (-) TimerEvent: {}
+[36.217081] (-) TimerEvent: {}
+[36.317971] (-) TimerEvent: {}
+[36.418893] (-) TimerEvent: {}
+[36.519737] (-) TimerEvent: {}
+[36.620665] (-) TimerEvent: {}
+[36.721586] (-) TimerEvent: {}
+[36.822546] (-) TimerEvent: {}
+[36.923455] (-) TimerEvent: {}
+[37.024568] (-) TimerEvent: {}
+[37.125483] (-) TimerEvent: {}
+[37.226439] (-) TimerEvent: {}
+[37.327315] (-) TimerEvent: {}
+[37.428272] (-) TimerEvent: {}
+[37.529234] (-) TimerEvent: {}
+[37.630188] (-) TimerEvent: {}
+[37.731226] (-) TimerEvent: {}
+[37.832488] (-) TimerEvent: {}
+[37.933547] (-) TimerEvent: {}
+[38.034472] (-) TimerEvent: {}
+[38.135425] (-) TimerEvent: {}
+[38.236381] (-) TimerEvent: {}
+[38.337290] (-) TimerEvent: {}
+[38.438337] (-) TimerEvent: {}
+[38.539323] (-) TimerEvent: {}
+[38.640316] (-) TimerEvent: {}
+[38.741298] (-) TimerEvent: {}
+[38.842733] (-) TimerEvent: {}
+[38.944704] (-) TimerEvent: {}
+[39.045859] (-) TimerEvent: {}
+[39.146739] (-) TimerEvent: {}
+[39.247686] (-) TimerEvent: {}
+[39.348633] (-) TimerEvent: {}
+[39.449572] (-) TimerEvent: {}
+[39.550451] (-) TimerEvent: {}
+[39.651470] (-) TimerEvent: {}
+[39.752658] (-) TimerEvent: {}
+[39.854462] (-) TimerEvent: {}
+[39.955573] (-) TimerEvent: {}
+[40.056472] (-) TimerEvent: {}
+[40.157391] (-) TimerEvent: {}
+[40.258362] (-) TimerEvent: {}
+[40.359313] (-) TimerEvent: {}
+[40.460252] (-) TimerEvent: {}
+[40.561212] (-) TimerEvent: {}
+[40.662191] (-) TimerEvent: {}
+[40.763225] (-) TimerEvent: {}
+[40.864268] (-) TimerEvent: {}
+[40.965332] (-) TimerEvent: {}
+[41.066619] (-) TimerEvent: {}
+[41.167910] (-) TimerEvent: {}
+[41.268741] (-) TimerEvent: {}
+[41.369659] (-) TimerEvent: {}
+[41.470480] (-) TimerEvent: {}
+[41.571370] (-) TimerEvent: {}
+[41.672287] (-) TimerEvent: {}
+[41.773179] (-) TimerEvent: {}
+[41.874063] (-) TimerEvent: {}
+[41.975092] (-) TimerEvent: {}
+[42.076094] (-) TimerEvent: {}
+[42.176955] (-) TimerEvent: {}
+[42.277928] (-) TimerEvent: {}
+[42.378796] (-) TimerEvent: {}
+[42.479640] (-) TimerEvent: {}
+[42.580471] (-) TimerEvent: {}
+[42.681365] (-) TimerEvent: {}
+[42.782247] (-) TimerEvent: {}
+[42.883138] (-) TimerEvent: {}
+[42.984025] (-) TimerEvent: {}
+[43.085475] (-) TimerEvent: {}
+[43.186375] (-) TimerEvent: {}
+[43.287293] (-) TimerEvent: {}
+[43.388278] (-) TimerEvent: {}
+[43.489222] (-) TimerEvent: {}
+[43.590151] (-) TimerEvent: {}
+[43.691062] (-) TimerEvent: {}
+[43.792115] (-) TimerEvent: {}
+[43.892978] (-) TimerEvent: {}
+[43.993852] (-) TimerEvent: {}
+[44.094692] (-) TimerEvent: {}
+[44.195593] (-) TimerEvent: {}
+[44.296427] (-) TimerEvent: {}
+[44.397342] (-) TimerEvent: {}
+[44.498221] (-) TimerEvent: {}
+[44.599093] (-) TimerEvent: {}
+[44.699970] (-) TimerEvent: {}
+[44.800825] (-) TimerEvent: {}
+[44.901693] (-) TimerEvent: {}
+[45.002672] (-) TimerEvent: {}
+[45.103576] (-) TimerEvent: {}
+[45.204391] (-) TimerEvent: {}
+[45.305267] (-) TimerEvent: {}
+[45.406549] (-) TimerEvent: {}
+[45.507421] (-) TimerEvent: {}
+[45.611341] (-) TimerEvent: {}
+[45.712233] (-) TimerEvent: {}
+[45.813187] (-) TimerEvent: {}
+[45.916763] (-) TimerEvent: {}
+[46.021106] (-) TimerEvent: {}
+[46.121988] (-) TimerEvent: {}
+[46.222966] (-) TimerEvent: {}
+[46.324296] (-) TimerEvent: {}
+[46.425573] (-) TimerEvent: {}
+[46.527033] (-) TimerEvent: {}
+[46.628237] (-) TimerEvent: {}
+[46.729024] (-) TimerEvent: {}
+[46.829866] (-) TimerEvent: {}
+[46.930875] (-) TimerEvent: {}
+[47.031671] (-) TimerEvent: {}
+[47.132443] (-) TimerEvent: {}
+[47.233606] (-) TimerEvent: {}
+[47.336924] (-) TimerEvent: {}
+[47.438721] (-) TimerEvent: {}
+[47.539739] (-) TimerEvent: {}
+[47.640736] (-) TimerEvent: {}
+[47.741597] (-) TimerEvent: {}
+[47.842419] (-) TimerEvent: {}
+[47.943273] (-) TimerEvent: {}
+[48.044151] (-) TimerEvent: {}
+[48.147938] (-) TimerEvent: {}
+[48.248814] (-) TimerEvent: {}
+[49.104010] (-) TimerEvent: {}
+[49.204881] (-) TimerEvent: {}
+[49.305834] (-) TimerEvent: {}
+[49.407492] (-) TimerEvent: {}
+[49.508967] (-) TimerEvent: {}
+[49.610279] (-) TimerEvent: {}
+[49.711419] (-) TimerEvent: {}
+[49.812308] (-) TimerEvent: {}
+[49.913126] (-) TimerEvent: {}
+[50.013971] (-) TimerEvent: {}
+[50.114769] (-) TimerEvent: {}
+[50.215575] (-) TimerEvent: {}
+[50.316413] (-) TimerEvent: {}
+[50.417299] (-) TimerEvent: {}
+[50.518251] (-) TimerEvent: {}
+[50.619274] (-) TimerEvent: {}
+[50.720479] (-) TimerEvent: {}
+[50.821687] (-) TimerEvent: {}
+[50.922866] (-) TimerEvent: {}
+[51.024057] (-) TimerEvent: {}
+[51.125424] (-) TimerEvent: {}
+[51.226339] (-) TimerEvent: {}
+[51.327277] (-) TimerEvent: {}
+[51.428244] (-) TimerEvent: {}
+[51.529093] (-) TimerEvent: {}
+[51.630053] (-) TimerEvent: {}
+[51.730911] (-) TimerEvent: {}
+[51.831834] (-) TimerEvent: {}
+[51.932700] (-) TimerEvent: {}
+[52.033636] (-) TimerEvent: {}
+[52.134492] (-) TimerEvent: {}
+[52.237326] (-) TimerEvent: {}
+[52.338440] (-) TimerEvent: {}
+[52.439304] (-) TimerEvent: {}
+[52.540183] (-) TimerEvent: {}
+[52.641221] (-) TimerEvent: {}
+[52.742277] (-) TimerEvent: {}
+[52.843205] (-) TimerEvent: {}
+[52.944102] (-) TimerEvent: {}
+[53.045024] (-) TimerEvent: {}
+[53.145875] (-) TimerEvent: {}
+[53.246708] (-) TimerEvent: {}
+[53.348709] (-) TimerEvent: {}
+[53.452983] (-) TimerEvent: {}
+[53.556979] (-) TimerEvent: {}
+[53.658246] (-) TimerEvent: {}
+[53.759205] (-) TimerEvent: {}
+[53.860243] (-) TimerEvent: {}
+[53.962718] (-) TimerEvent: {}
+[54.063641] (-) TimerEvent: {}
+[54.164492] (-) TimerEvent: {}
+[54.265556] (-) TimerEvent: {}
+[54.368703] (-) TimerEvent: {}
+[54.469600] (-) TimerEvent: {}
+[54.570448] (-) TimerEvent: {}
+[54.673951] (-) TimerEvent: {}
+[54.774909] (-) TimerEvent: {}
+[54.878932] (-) TimerEvent: {}
+[54.979814] (-) TimerEvent: {}
+[55.080688] (-) TimerEvent: {}
+[55.181618] (-) TimerEvent: {}
+[55.282459] (-) TimerEvent: {}
+[55.383436] (-) TimerEvent: {}
+[55.484282] (-) TimerEvent: {}
+[55.585214] (-) TimerEvent: {}
+[55.689001] (-) TimerEvent: {}
+[55.789978] (-) TimerEvent: {}
+[55.891070] (-) TimerEvent: {}
+[55.991968] (-) TimerEvent: {}
+[56.092833] (-) TimerEvent: {}
+[56.193997] (-) TimerEvent: {}
+[56.295158] (-) TimerEvent: {}
+[56.396050] (-) TimerEvent: {}
+[56.496922] (-) TimerEvent: {}
+[56.597788] (-) TimerEvent: {}
+[56.698657] (-) TimerEvent: {}
+[56.799580] (-) TimerEvent: {}
+[56.902916] (-) TimerEvent: {}
+[57.003765] (-) TimerEvent: {}
+[57.104688] (-) TimerEvent: {}
+[57.206344] (-) TimerEvent: {}
+[57.309950] (-) TimerEvent: {}
+[57.411451] (-) TimerEvent: {}
+[57.512345] (-) TimerEvent: {}
+[57.613633] (-) TimerEvent: {}
+[57.715068] (-) TimerEvent: {}
+[57.816028] (-) TimerEvent: {}
+[57.916997] (-) TimerEvent: {}
+[58.017877] (-) TimerEvent: {}
+[58.118682] (-) TimerEvent: {}
+[58.219566] (-) TimerEvent: {}
+[58.320477] (-) TimerEvent: {}
+[59.288458] (-) TimerEvent: {}
+[59.389415] (-) TimerEvent: {}
+[59.490319] (-) TimerEvent: {}
+[59.591308] (-) TimerEvent: {}
+[59.692233] (-) TimerEvent: {}
+[59.793208] (-) TimerEvent: {}
+[59.894140] (-) TimerEvent: {}
+[59.995059] (-) TimerEvent: {}
+[60.095909] (-) TimerEvent: {}
+[60.197037] (-) TimerEvent: {}
+[60.297922] (-) TimerEvent: {}
+[60.398828] (-) TimerEvent: {}
+[60.499674] (-) TimerEvent: {}
+[61.302685] (-) TimerEvent: {}
+[62.283757] (-) TimerEvent: {}
+[62.408994] (-) TimerEvent: {}
+[62.509901] (-) TimerEvent: {}
+[62.610854] (-) TimerEvent: {}
+[62.711675] (-) TimerEvent: {}
+[62.812453] (-) TimerEvent: {}
+[62.913316] (-) TimerEvent: {}
+[63.014232] (-) TimerEvent: {}
+[63.114986] (-) TimerEvent: {}
+[63.216149] (-) TimerEvent: {}
+[63.317045] (-) TimerEvent: {}
+[63.563552] (-) TimerEvent: {}
+[63.664466] (-) TimerEvent: {}
+[63.765342] (-) TimerEvent: {}
+[63.869576] (-) TimerEvent: {}
+[63.970870] (-) TimerEvent: {}
+[64.071759] (-) TimerEvent: {}
+[64.172672] (-) TimerEvent: {}
+[64.273576] (-) TimerEvent: {}
+[64.374339] (-) TimerEvent: {}
+[64.475364] (-) TimerEvent: {}
+[64.576331] (-) TimerEvent: {}
+[64.678671] (-) TimerEvent: {}
+[64.779573] (-) TimerEvent: {}
+[64.882990] (-) TimerEvent: {}
+[64.983888] (-) TimerEvent: {}
+[65.087035] (-) TimerEvent: {}
+[65.192126] (-) TimerEvent: {}
+[65.293062] (-) TimerEvent: {}
+[65.397021] (-) TimerEvent: {}
+[65.497927] (-) TimerEvent: {}
+[65.599440] (-) TimerEvent: {}
+[65.700614] (-) TimerEvent: {}
+[65.801634] (-) TimerEvent: {}
+[65.902707] (-) TimerEvent: {}
+[66.006316] (-) TimerEvent: {}
+[66.107217] (-) TimerEvent: {}
+[66.216235] (-) TimerEvent: {}
+[66.320228] (-) TimerEvent: {}
+[66.422223] (-) TimerEvent: {}
+[66.526191] (-) TimerEvent: {}
+[66.628086] (-) TimerEvent: {}
+[66.729712] (-) TimerEvent: {}
+[66.833420] (-) TimerEvent: {}
+[66.934368] (-) TimerEvent: {}
+[67.037092] (-) TimerEvent: {}
+[67.138709] (-) TimerEvent: {}
+[67.242031] (-) TimerEvent: {}
+[67.342931] (-) TimerEvent: {}
+[67.443783] (-) TimerEvent: {}
+[67.546934] (-) TimerEvent: {}
+[67.647898] (-) TimerEvent: {}
+[67.748808] (-) TimerEvent: {}
+[67.849895] (-) TimerEvent: {}
+[67.950847] (-) TimerEvent: {}
+[68.051840] (-) TimerEvent: {}
+[68.153165] (-) TimerEvent: {}
+[68.254329] (-) TimerEvent: {}
+[68.355117] (-) TimerEvent: {}
+[68.455962] (-) TimerEvent: {}
+[68.556891] (-) TimerEvent: {}
+[68.660955] (-) TimerEvent: {}
+[68.761818] (-) TimerEvent: {}
+[68.862853] (-) TimerEvent: {}
+[68.963650] (-) TimerEvent: {}
+[69.064431] (-) TimerEvent: {}
+[69.165272] (-) TimerEvent: {}
+[69.266549] (-) TimerEvent: {}
+[69.370109] (-) TimerEvent: {}
+[69.470988] (-) TimerEvent: {}
+[69.573015] (-) TimerEvent: {}
+[69.673988] (-) TimerEvent: {}
+[69.778361] (-) TimerEvent: {}
+[69.883240] (-) TimerEvent: {}
+[69.987730] (-) TimerEvent: {}
+[70.088810] (-) TimerEvent: {}
+[70.190120] (-) TimerEvent: {}
+[70.294828] (-) TimerEvent: {}
+[70.396140] (-) TimerEvent: {}
+[70.497448] (-) TimerEvent: {}
+[70.603969] (-) TimerEvent: {}
+[70.705932] (-) TimerEvent: {}
+[70.806761] (-) TimerEvent: {}
+[70.907644] (-) TimerEvent: {}
+[71.008477] (-) TimerEvent: {}
+[71.112689] (-) TimerEvent: {}
+[71.214857] (-) TimerEvent: {}
+[71.319959] (-) TimerEvent: {}
+[71.421603] (-) TimerEvent: {}
+[71.525127] (-) TimerEvent: {}
+[71.628322] (-) TimerEvent: {}
+[71.733032] (-) TimerEvent: {}
+[71.835422] (-) TimerEvent: {}
+[71.939109] (-) TimerEvent: {}
+[72.043864] (-) TimerEvent: {}
+[72.147909] (-) TimerEvent: {}
+[72.250800] (-) TimerEvent: {}
+[72.352029] (-) TimerEvent: {}
+[72.455039] (-) TimerEvent: {}
+[72.559077] (-) TimerEvent: {}
+[72.661182] (-) TimerEvent: {}
+[72.765858] (-) TimerEvent: {}
+[72.867858] (-) TimerEvent: {}
+[72.973670] (-) TimerEvent: {}
+[73.077980] (-) TimerEvent: {}
+[73.180006] (-) TimerEvent: {}
+[73.287790] (-) TimerEvent: {}
+[73.390751] (-) TimerEvent: {}
+[73.502844] (-) TimerEvent: {}
+[73.609390] (-) TimerEvent: {}
+[73.716704] (-) TimerEvent: {}
+[73.821734] (-) TimerEvent: {}
+[73.922827] (-) TimerEvent: {}
+[74.024720] (-) TimerEvent: {}
+[74.130408] (-) TimerEvent: {}
+[74.233908] (-) TimerEvent: {}
+[74.340481] (-) TimerEvent: {}
+[74.442153] (-) TimerEvent: {}
+[74.543129] (-) TimerEvent: {}
+[74.645121] (-) TimerEvent: {}
+[74.750411] (-) TimerEvent: {}
+[74.853794] (-) TimerEvent: {}
+[74.954767] (-) TimerEvent: {}
+[75.055691] (-) TimerEvent: {}
+[75.156695] (-) TimerEvent: {}
+[75.257761] (-) TimerEvent: {}
+[75.358965] (-) TimerEvent: {}
+[75.460611] (-) TimerEvent: {}
+[75.516720] (wc_bridge) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable twist_to_ackermann\x1b[0m\n'}
+[75.581580] (-) TimerEvent: {}
+[75.684344] (-) TimerEvent: {}
+[75.785776] (-) TimerEvent: {}
+[75.887786] (-) TimerEvent: {}
+[75.989080] (-) TimerEvent: {}
+[76.093450] (-) TimerEvent: {}
+[76.197241] (-) TimerEvent: {}
+[76.308652] (-) TimerEvent: {}
+[76.414972] (-) TimerEvent: {}
+[76.519026] (-) TimerEvent: {}
+[76.623018] (-) TimerEvent: {}
+[76.726737] (-) TimerEvent: {}
+[76.832155] (-) TimerEvent: {}
+[76.934705] (-) TimerEvent: {}
+[77.046986] (-) TimerEvent: {}
+[77.169047] (-) TimerEvent: {}
+[77.273073] (-) TimerEvent: {}
+[77.381808] (-) TimerEvent: {}
+[77.486642] (-) TimerEvent: {}
+[77.590931] (-) TimerEvent: {}
+[77.694087] (-) TimerEvent: {}
+[77.795426] (-) TimerEvent: {}
+[77.897719] (-) TimerEvent: {}
+[78.001219] (-) TimerEvent: {}
+[78.103314] (-) TimerEvent: {}
+[78.204588] (-) TimerEvent: {}
+[78.305630] (-) TimerEvent: {}
+[78.406974] (-) TimerEvent: {}
+[78.508490] (-) TimerEvent: {}
+[78.609641] (-) TimerEvent: {}
+[78.710673] (-) TimerEvent: {}
+[78.814138] (-) TimerEvent: {}
+[78.915885] (-) TimerEvent: {}
+[79.018676] (-) TimerEvent: {}
+[79.121088] (-) TimerEvent: {}
+[79.224264] (-) TimerEvent: {}
+[79.327817] (-) TimerEvent: {}
+[79.428823] (-) TimerEvent: {}
+[79.530948] (-) TimerEvent: {}
+[79.640996] (-) TimerEvent: {}
+[79.742698] (-) TimerEvent: {}
+[79.845795] (-) TimerEvent: {}
+[79.947245] (-) TimerEvent: {}
+[80.048305] (-) TimerEvent: {}
+[80.149719] (-) TimerEvent: {}
+[80.252901] (-) TimerEvent: {}
+[80.354475] (-) TimerEvent: {}
+[80.458931] (-) TimerEvent: {}
+[80.560872] (-) TimerEvent: {}
+[80.680394] (-) TimerEvent: {}
+[80.786295] (-) TimerEvent: {}
+[80.891274] (-) TimerEvent: {}
+[80.996969] (-) TimerEvent: {}
+[81.098285] (-) TimerEvent: {}
+[81.199345] (-) TimerEvent: {}
+[81.302695] (-) TimerEvent: {}
+[81.404479] (-) TimerEvent: {}
+[81.472574] (wc_bridge) StdoutLine: {'line': b'[100%] Built target twist_to_ackermann\n'}
+[81.504741] (-) TimerEvent: {}
+[81.577591] (wc_bridge) CommandEnded: {'returncode': 0}
+[81.587111] (wc_bridge) JobProgress: {'identifier': 'wc_bridge', 'progress': 'install'}
+[81.604908] (-) TimerEvent: {}
+[81.669060] (wc_bridge) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge'], 'cwd': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'rtrk-tenk', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'HOME': '/home/rtrk-tenk', 'OLDPWD': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '1637', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=b05c830e2df34bb35e2815a0698a37ba', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'rtrk-tenk', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\\x2dsession\\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'rtrk-tenk', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/rtrktenk-desktop:@/tmp/.ICE-unix/1637,unix/rtrktenk-desktop:/tmp/.ICE-unix/1637', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/ba295cf0_4c9b_4e0c_afcd_3111c7fdfbc5', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.76Q7J3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.145', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=b05c830e2df34bb35e2815a0698a37ba', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main:/opt/ros/jazzy'}), 'shell': False}
+[81.705148] (-) TimerEvent: {}
+[81.734444] (wc_bridge) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[81.739151] (wc_bridge) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/lib/wc_bridge/twist_to_ackermann\n'}
+[81.789696] (wc_bridge) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/lib/wc_bridge/twist_to_ackermann" to ""\n'}
+[81.799043] (wc_bridge) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/ament_index/resource_index/package_run_dependencies/wc_bridge\n'}
+[81.804721] (wc_bridge) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/ament_index/resource_index/parent_prefix_path/wc_bridge\n'}
+[81.807947] (-) TimerEvent: {}
+[81.814488] (wc_bridge) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/environment/ament_prefix_path.sh\n'}
+[81.825409] (wc_bridge) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/environment/ament_prefix_path.dsv\n'}
+[81.831741] (wc_bridge) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/environment/path.sh\n'}
+[81.832764] (wc_bridge) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/environment/path.dsv\n'}
+[81.862132] (wc_bridge) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/local_setup.bash\n'}
+[81.863535] (wc_bridge) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/local_setup.sh\n'}
+[81.887670] (wc_bridge) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/local_setup.zsh\n'}
+[81.911796] (-) TimerEvent: {}
+[81.917410] (wc_bridge) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/local_setup.dsv\n'}
+[81.921198] (wc_bridge) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/package.dsv\n'}
+[81.939358] (wc_bridge) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/ament_index/resource_index/packages/wc_bridge\n'}
+[81.966452] (wc_bridge) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/cmake/wc_bridgeConfig.cmake\n'}
+[81.967832] (wc_bridge) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/cmake/wc_bridgeConfig-version.cmake\n'}
+[81.969288] (wc_bridge) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/package.xml\n'}
+[81.982881] (wc_bridge) CommandEnded: {'returncode': 0}
+[82.012116] (-) TimerEvent: {}
+[82.115214] (-) TimerEvent: {}
+[82.223730] (-) TimerEvent: {}
+[82.333923] (-) TimerEvent: {}
+[82.465868] (-) TimerEvent: {}
+[82.600865] (-) TimerEvent: {}
+[82.720148] (-) TimerEvent: {}
+[82.774239] (wc_bridge) JobEnded: {'identifier': 'wc_bridge', 'rc': 0}
+[82.824919] (-) TimerEvent: {}
+[82.926018] (-) TimerEvent: {}
+[83.028023] (-) TimerEvent: {}
+[83.070045] (wc_main) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable simple_ackermann_controller\x1b[0m\n'}
+[83.129386] (-) TimerEvent: {}
+[83.231815] (-) TimerEvent: {}
+[83.336322] (-) TimerEvent: {}
+[83.460404] (-) TimerEvent: {}
+[83.565045] (-) TimerEvent: {}
+[83.670483] (-) TimerEvent: {}
+[83.777331] (-) TimerEvent: {}
+[83.883491] (-) TimerEvent: {}
+[83.984905] (-) TimerEvent: {}
+[84.085903] (-) TimerEvent: {}
+[84.189959] (-) TimerEvent: {}
+[84.291975] (-) TimerEvent: {}
+[84.393062] (-) TimerEvent: {}
+[84.494086] (-) TimerEvent: {}
+[84.597724] (-) TimerEvent: {}
+[84.698653] (-) TimerEvent: {}
+[84.800214] (-) TimerEvent: {}
+[84.906103] (-) TimerEvent: {}
+[85.009033] (-) TimerEvent: {}
+[85.114164] (-) TimerEvent: {}
+[85.217676] (-) TimerEvent: {}
+[85.319340] (-) TimerEvent: {}
+[85.420942] (-) TimerEvent: {}
+[85.521867] (-) TimerEvent: {}
+[85.623415] (-) TimerEvent: {}
+[85.724311] (-) TimerEvent: {}
+[85.825446] (-) TimerEvent: {}
+[85.926656] (-) TimerEvent: {}
+[86.027741] (-) TimerEvent: {}
+[86.128848] (-) TimerEvent: {}
+[86.230637] (-) TimerEvent: {}
+[86.332605] (-) TimerEvent: {}
+[86.433607] (-) TimerEvent: {}
+[86.534760] (-) TimerEvent: {}
+[86.635675] (-) TimerEvent: {}
+[86.738491] (-) TimerEvent: {}
+[86.822529] (wc_main) StdoutLine: {'line': b'[100%] Built target simple_ackermann_controller\n'}
+[86.838782] (-) TimerEvent: {}
+[86.924314] (wc_main) CommandEnded: {'returncode': 0}
+[86.935018] (wc_main) JobProgress: {'identifier': 'wc_main', 'progress': 'install'}
+[86.938308] (wc_main) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_main'], 'cwd': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_main', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'rtrk-tenk', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'HOME': '/home/rtrk-tenk', 'OLDPWD': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '1637', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=b05c830e2df34bb35e2815a0698a37ba', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'rtrk-tenk', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\\x2dsession\\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'rtrk-tenk', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/rtrktenk-desktop:@/tmp/.ICE-unix/1637,unix/rtrktenk-desktop:/tmp/.ICE-unix/1637', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/ba295cf0_4c9b_4e0c_afcd_3111c7fdfbc5', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.76Q7J3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.145', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_main', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=b05c830e2df34bb35e2815a0698a37ba', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main:/opt/ros/jazzy'}), 'shell': False}
+[86.944913] (-) TimerEvent: {}
+[87.018864] (wc_main) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[87.022594] (wc_main) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/lib/wc_main/simple_ackermann_controller\n'}
+[87.045173] (-) TimerEvent: {}
+[87.103767] (wc_main) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/lib/wc_main/simple_ackermann_controller" to ""\n'}
+[87.114770] (wc_main) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/ament_index/resource_index/package_run_dependencies/wc_main\n'}
+[87.117698] (wc_main) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/ament_index/resource_index/parent_prefix_path/wc_main\n'}
+[87.120411] (wc_main) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/environment/ament_prefix_path.sh\n'}
+[87.123219] (wc_main) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/environment/ament_prefix_path.dsv\n'}
+[87.125639] (wc_main) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/environment/path.sh\n'}
+[87.127439] (wc_main) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/environment/path.dsv\n'}
+[87.130712] (wc_main) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/local_setup.bash\n'}
+[87.136568] (wc_main) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/local_setup.sh\n'}
+[87.142108] (wc_main) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/local_setup.zsh\n'}
+[87.146355] (-) TimerEvent: {}
+[87.149997] (wc_main) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/local_setup.dsv\n'}
+[87.155046] (wc_main) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/package.dsv\n'}
+[87.161575] (wc_main) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/ament_index/resource_index/packages/wc_main\n'}
+[87.168640] (wc_main) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/cmake/wc_mainConfig.cmake\n'}
+[87.170854] (wc_main) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/cmake/wc_mainConfig-version.cmake\n'}
+[87.176958] (wc_main) StdoutLine: {'line': b'-- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/package.xml\n'}
+[87.193018] (wc_main) CommandEnded: {'returncode': 0}
+[87.247223] (-) TimerEvent: {}
+[87.307934] (wc_main) JobEnded: {'identifier': 'wc_main', 'rc': 0}
+[87.320663] (-) EventReactorShutdown: {}

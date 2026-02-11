@@ -1,0 +1,64 @@
+[0.182s] Invoking command in '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/src/wc_bridge -DCMAKE_INSTALL_PREFIX=/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge
+[1.595s] -- The C compiler identification is GNU 13.3.0
+[2.808s] -- The CXX compiler identification is GNU 13.3.0
+[2.982s] -- Detecting C compiler ABI info
+[4.236s] -- Detecting C compiler ABI info - done
+[4.337s] -- Check for working C compiler: /usr/bin/cc - skipped
+[4.338s] -- Detecting C compile features
+[4.339s] -- Detecting C compile features - done
+[4.422s] -- Detecting CXX compiler ABI info
+[5.652s] -- Detecting CXX compiler ABI info - done
+[5.751s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[5.765s] -- Detecting CXX compile features
+[5.767s] -- Detecting CXX compile features - done
+[5.814s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[7.235s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[8.782s] -- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)
+[9.405s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[9.582s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[9.771s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[9.960s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[10.637s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[10.669s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[11.379s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[11.516s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[11.737s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[12.450s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[12.781s] -- Found ackermann_msgs: 2.0.2 (/opt/ros/jazzy/share/ackermann_msgs/cmake)
+[12.990s] -- Found ament_lint_auto: 0.17.4 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[14.478s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[14.486s] -- Configured cppcheck include dirs: 
+[14.492s] -- Configured cppcheck exclude dirs and/or files: 
+[14.493s] -- Added test 'lint_cmake' to check CMake code style
+[14.516s] -- Added test 'uncrustify' to check C / C++ code style
+[14.517s] -- Configured uncrustify additional arguments: 
+[14.523s] -- Added test 'xmllint' to check XML markup files
+[14.555s] -- Configuring done (14.2s)
+[14.695s] -- Generating done (0.1s)
+[14.767s] -- Build files have been written to: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge
+[14.889s] Invoked command in '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/src/wc_bridge -DCMAKE_INSTALL_PREFIX=/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge
+[14.906s] Invoking command in '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge -- -j4 -l4
+[15.605s] [ 50%] [32mBuilding CXX object CMakeFiles/twist_to_ackermann.dir/src/twist_to_ackermann.cpp.o[0m
+[75.560s] [100%] [32m[1mLinking CXX executable twist_to_ackermann[0m
+[81.468s] [100%] Built target twist_to_ackermann
+[81.574s] Invoked command in '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge -- -j4 -l4
+[81.665s] Invoking command in '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge
+[81.729s] -- Install configuration: ""
+[81.734s] -- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/lib/wc_bridge/twist_to_ackermann
+[81.785s] -- Set non-toolchain portion of runtime path of "/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/lib/wc_bridge/twist_to_ackermann" to ""
+[81.794s] -- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/ament_index/resource_index/package_run_dependencies/wc_bridge
+[81.800s] -- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/ament_index/resource_index/parent_prefix_path/wc_bridge
+[81.809s] -- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/environment/ament_prefix_path.sh
+[81.824s] -- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/environment/ament_prefix_path.dsv
+[81.827s] -- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/environment/path.sh
+[81.828s] -- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/environment/path.dsv
+[81.857s] -- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/local_setup.bash
+[81.878s] -- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/local_setup.sh
+[81.902s] -- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/local_setup.zsh
+[81.915s] -- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/local_setup.dsv
+[81.933s] -- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/package.dsv
+[81.960s] -- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/ament_index/resource_index/packages/wc_bridge
+[81.962s] -- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/cmake/wc_bridgeConfig.cmake
+[81.963s] -- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/cmake/wc_bridgeConfig-version.cmake
+[81.965s] -- Installing: /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/package.xml
+[81.981s] Invoked command in '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge

@@ -1,0 +1,211 @@
+[0.798s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.799s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff9ed68d10>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff9ed22a50>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff9ed22a50>>)
+[1.244s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.245s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.245s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.245s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.245s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.246s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.246s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws'
+[1.246s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.247s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.248s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.248s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.248s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.249s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.249s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.249s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.249s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.501s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.501s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.502s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.503s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.503s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.505s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.506s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.507s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.508s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.510s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.510s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.511s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.512s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.513s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.514s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.514s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.515s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.515s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.516s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.516s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.516s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.517s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.517s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.518s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.519s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.519s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.520s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.520s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.521s] Level 1:colcon.colcon_core.package_identification:_identify(src/wc_bridge) by extensions ['ignore', 'ignore_ament_install']
+[1.522s] Level 1:colcon.colcon_core.package_identification:_identify(src/wc_bridge) by extension 'ignore'
+[1.523s] Level 1:colcon.colcon_core.package_identification:_identify(src/wc_bridge) by extension 'ignore_ament_install'
+[1.525s] Level 1:colcon.colcon_core.package_identification:_identify(src/wc_bridge) by extensions ['colcon_pkg']
+[1.526s] Level 1:colcon.colcon_core.package_identification:_identify(src/wc_bridge) by extension 'colcon_pkg'
+[1.526s] Level 1:colcon.colcon_core.package_identification:_identify(src/wc_bridge) by extensions ['colcon_meta']
+[1.527s] Level 1:colcon.colcon_core.package_identification:_identify(src/wc_bridge) by extension 'colcon_meta'
+[1.527s] Level 1:colcon.colcon_core.package_identification:_identify(src/wc_bridge) by extensions ['ros']
+[1.527s] Level 1:colcon.colcon_core.package_identification:_identify(src/wc_bridge) by extension 'ros'
+[1.558s] DEBUG:colcon.colcon_core.package_identification:Package 'src/wc_bridge' with type 'ros.ament_cmake' and name 'wc_bridge'
+[1.559s] Level 1:colcon.colcon_core.package_identification:_identify(src/wc_main) by extensions ['ignore', 'ignore_ament_install']
+[1.559s] Level 1:colcon.colcon_core.package_identification:_identify(src/wc_main) by extension 'ignore'
+[1.560s] Level 1:colcon.colcon_core.package_identification:_identify(src/wc_main) by extension 'ignore_ament_install'
+[1.561s] Level 1:colcon.colcon_core.package_identification:_identify(src/wc_main) by extensions ['colcon_pkg']
+[1.561s] Level 1:colcon.colcon_core.package_identification:_identify(src/wc_main) by extension 'colcon_pkg'
+[1.561s] Level 1:colcon.colcon_core.package_identification:_identify(src/wc_main) by extensions ['colcon_meta']
+[1.561s] Level 1:colcon.colcon_core.package_identification:_identify(src/wc_main) by extension 'colcon_meta'
+[1.562s] Level 1:colcon.colcon_core.package_identification:_identify(src/wc_main) by extensions ['ros']
+[1.562s] Level 1:colcon.colcon_core.package_identification:_identify(src/wc_main) by extension 'ros'
+[1.565s] DEBUG:colcon.colcon_core.package_identification:Package 'src/wc_main' with type 'ros.ament_cmake' and name 'wc_main'
+[1.566s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.566s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.566s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.566s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.566s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.721s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.722s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.734s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[1.736s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[1.747s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 0 installed packages in /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install
+[1.761s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 197 installed packages in /opt/ros/jazzy
+[1.772s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[2.120s] Level 5:colcon.colcon_core.verb:set package 'wc_bridge' build argument 'cmake_args' from command line to 'None'
+[2.121s] Level 5:colcon.colcon_core.verb:set package 'wc_bridge' build argument 'cmake_target' from command line to 'None'
+[2.122s] Level 5:colcon.colcon_core.verb:set package 'wc_bridge' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.122s] Level 5:colcon.colcon_core.verb:set package 'wc_bridge' build argument 'cmake_clean_cache' from command line to 'False'
+[2.122s] Level 5:colcon.colcon_core.verb:set package 'wc_bridge' build argument 'cmake_clean_first' from command line to 'False'
+[2.123s] Level 5:colcon.colcon_core.verb:set package 'wc_bridge' build argument 'cmake_force_configure' from command line to 'False'
+[2.123s] Level 5:colcon.colcon_core.verb:set package 'wc_bridge' build argument 'ament_cmake_args' from command line to 'None'
+[2.123s] Level 5:colcon.colcon_core.verb:set package 'wc_bridge' build argument 'catkin_cmake_args' from command line to 'None'
+[2.123s] Level 5:colcon.colcon_core.verb:set package 'wc_bridge' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.123s] DEBUG:colcon.colcon_core.verb:Building package 'wc_bridge' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge', 'merge_install': False, 'path': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/src/wc_bridge', 'symlink_install': False, 'test_result_base': None}
+[2.125s] Level 5:colcon.colcon_core.verb:set package 'wc_main' build argument 'cmake_args' from command line to 'None'
+[2.125s] Level 5:colcon.colcon_core.verb:set package 'wc_main' build argument 'cmake_target' from command line to 'None'
+[2.125s] Level 5:colcon.colcon_core.verb:set package 'wc_main' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.125s] Level 5:colcon.colcon_core.verb:set package 'wc_main' build argument 'cmake_clean_cache' from command line to 'False'
+[2.126s] Level 5:colcon.colcon_core.verb:set package 'wc_main' build argument 'cmake_clean_first' from command line to 'False'
+[2.126s] Level 5:colcon.colcon_core.verb:set package 'wc_main' build argument 'cmake_force_configure' from command line to 'False'
+[2.126s] Level 5:colcon.colcon_core.verb:set package 'wc_main' build argument 'ament_cmake_args' from command line to 'None'
+[2.126s] Level 5:colcon.colcon_core.verb:set package 'wc_main' build argument 'catkin_cmake_args' from command line to 'None'
+[2.126s] Level 5:colcon.colcon_core.verb:set package 'wc_main' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.126s] DEBUG:colcon.colcon_core.verb:Building package 'wc_main' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_main', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main', 'merge_install': False, 'path': '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/src/wc_main', 'symlink_install': False, 'test_result_base': None}
+[2.127s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[2.135s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[2.137s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/src/wc_bridge' with build type 'ament_cmake'
+[2.141s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/src/wc_bridge'
+[2.185s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.187s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.188s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.222s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/src/wc_main' with build type 'ament_cmake'
+[2.224s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/src/wc_main'
+[2.226s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.226s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.322s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/src/wc_bridge -DCMAKE_INSTALL_PREFIX=/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge
+[2.400s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_main': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/src/wc_main -DCMAKE_INSTALL_PREFIX=/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main
+[16.559s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_main' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/src/wc_main -DCMAKE_INSTALL_PREFIX=/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main
+[16.565s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_main': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_main -- -j4 -l4
+[17.029s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/src/wc_bridge -DCMAKE_INSTALL_PREFIX=/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge
+[17.047s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge -- -j4 -l4
+[83.714s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge -- -j4 -l4
+[83.805s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge
+[84.113s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(wc_bridge)
+[84.123s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_bridge
+[84.295s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge' for CMake module files
+[84.314s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge' for CMake config files
+[84.322s] Level 1:colcon.colcon_core.shell:create_environment_hook('wc_bridge', 'cmake_prefix_path')
+[84.326s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/hook/cmake_prefix_path.ps1'
+[84.352s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/hook/cmake_prefix_path.dsv'
+[84.379s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/hook/cmake_prefix_path.sh'
+[84.417s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/lib'
+[84.429s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/bin'
+[84.433s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/lib/pkgconfig/wc_bridge.pc'
+[84.439s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/lib/python3.12/site-packages'
+[84.444s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/bin'
+[84.452s] INFO:colcon.colcon_core.shell:Creating package script '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/package.ps1'
+[84.471s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/package.dsv'
+[84.498s] INFO:colcon.colcon_core.shell:Creating package script '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/package.sh'
+[84.515s] INFO:colcon.colcon_core.shell:Creating package script '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/package.bash'
+[84.534s] INFO:colcon.colcon_core.shell:Creating package script '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/package.zsh'
+[84.579s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/colcon-core/packages/wc_bridge)
+[84.637s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(wc_bridge)
+[84.639s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge' for CMake module files
+[84.694s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge' for CMake config files
+[84.705s] Level 1:colcon.colcon_core.shell:create_environment_hook('wc_bridge', 'cmake_prefix_path')
+[84.717s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/hook/cmake_prefix_path.ps1'
+[84.756s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/hook/cmake_prefix_path.dsv'
+[84.765s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/hook/cmake_prefix_path.sh'
+[84.777s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/lib'
+[84.779s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/bin'
+[84.781s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/lib/pkgconfig/wc_bridge.pc'
+[84.783s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/lib/python3.12/site-packages'
+[84.788s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/bin'
+[84.794s] INFO:colcon.colcon_core.shell:Creating package script '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/package.ps1'
+[84.806s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/package.dsv'
+[84.816s] INFO:colcon.colcon_core.shell:Creating package script '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/package.sh'
+[84.846s] INFO:colcon.colcon_core.shell:Creating package script '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/package.bash'
+[84.876s] INFO:colcon.colcon_core.shell:Creating package script '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/wc_bridge/package.zsh'
+[84.890s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_bridge/share/colcon-core/packages/wc_bridge)
+[89.063s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_main' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_main -- -j4 -l4
+[89.078s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_main': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_main
+[89.327s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(wc_main)
+[89.328s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main' for CMake module files
+[89.330s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_main' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/build/wc_main
+[89.334s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main' for CMake config files
+[89.337s] Level 1:colcon.colcon_core.shell:create_environment_hook('wc_main', 'cmake_prefix_path')
+[89.338s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/hook/cmake_prefix_path.ps1'
+[89.342s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/hook/cmake_prefix_path.dsv'
+[89.347s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/hook/cmake_prefix_path.sh'
+[89.352s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/lib'
+[89.353s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/bin'
+[89.353s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/lib/pkgconfig/wc_main.pc'
+[89.355s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/lib/python3.12/site-packages'
+[89.356s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/bin'
+[89.358s] INFO:colcon.colcon_core.shell:Creating package script '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/package.ps1'
+[89.360s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/package.dsv'
+[89.362s] INFO:colcon.colcon_core.shell:Creating package script '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/package.sh'
+[89.365s] INFO:colcon.colcon_core.shell:Creating package script '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/package.bash'
+[89.367s] INFO:colcon.colcon_core.shell:Creating package script '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/package.zsh'
+[89.369s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/colcon-core/packages/wc_main)
+[89.372s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(wc_main)
+[89.373s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main' for CMake module files
+[89.377s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main' for CMake config files
+[89.379s] Level 1:colcon.colcon_core.shell:create_environment_hook('wc_main', 'cmake_prefix_path')
+[89.380s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/hook/cmake_prefix_path.ps1'
+[89.385s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/hook/cmake_prefix_path.dsv'
+[89.392s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/hook/cmake_prefix_path.sh'
+[89.406s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/lib'
+[89.409s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/bin'
+[89.410s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/lib/pkgconfig/wc_main.pc'
+[89.412s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/lib/python3.12/site-packages'
+[89.415s] Level 1:colcon.colcon_core.environment:checking '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/bin'
+[89.417s] INFO:colcon.colcon_core.shell:Creating package script '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/package.ps1'
+[89.423s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/package.dsv'
+[89.428s] INFO:colcon.colcon_core.shell:Creating package script '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/package.sh'
+[89.432s] INFO:colcon.colcon_core.shell:Creating package script '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/package.bash'
+[89.435s] INFO:colcon.colcon_core.shell:Creating package script '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/wc_main/package.zsh'
+[89.440s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/wc_main/share/colcon-core/packages/wc_main)
+[89.445s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[89.453s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[89.453s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[89.454s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[89.644s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[89.645s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[89.646s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[89.984s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[89.987s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/local_setup.ps1'
+[89.995s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/_local_setup_util_ps1.py'
+[90.014s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/setup.ps1'
+[90.023s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/local_setup.sh'
+[90.030s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/_local_setup_util_sh.py'
+[90.039s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/setup.sh'
+[90.055s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/local_setup.bash'
+[90.062s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/setup.bash'
+[90.068s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/local_setup.zsh'
+[90.073s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rtrk-tenk/OSuRV_2024-main/Robotics/Tank/vezba06_kernel_space/ROS/arm_and_chassis_ws/install/setup.zsh'
