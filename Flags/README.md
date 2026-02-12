@@ -76,3 +76,6 @@ Flags/SW/Motor_Ctrl/
 - **Network setup**: IP adrese moraju biti podešene u kodu (PC ↔ RPi komunikacija)
 
 
+## Linkovi
+
+Youtube video: https://youtu.be/rRIwtviOpec?si=6fFKUAO7426B94Af
