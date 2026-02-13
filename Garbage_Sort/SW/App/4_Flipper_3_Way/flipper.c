@@ -12,18 +12,11 @@
 
 int fd;
 
-/*void stop(int sig){
-		uint8_t motor_stop[3] = {'w', 2, 0};
-		write(fd, motor_stop, sizeof(motor_stop));
-		tcdrain(fd);
-		close(fd);
-		exit(0);
-}*/
 
 int main()
 {
 	int r;
-	int smer_kazaljke = 1;	// pocetni smer
+	int smer_kazaljke = 1;
 	
 	fd = open(DEV_STREAM_FN, O_RDWR);
 	if(fd < 0){
@@ -32,25 +25,23 @@ int main()
 		return 4;
 	}
 	
-	/*signal(SIGINT, stop);
-	signal(SIGTERM, stop);*/
 
 	// ccw
 	uint8_t set_p4_0[3] = {'w', 4, 0}; 
-	uint8_t set_p3_1[3] = {'w', 3, 1};		//kad je kombinaija 4 1, 3 0 ne radi sa lijeva ka sredini
+	uint8_t set_p3_1[3] = {'w', 3, 1};		
 			
 	// cw obrnut smer
 	uint8_t set_p4_1[3] = {'w', 4, 1}; 
-	uint8_t set_p3_0[3] = {'w', 3, 0};									//kad je komb 4 0, 3 1 ne radi sa desna na sredini
+	uint8_t set_p3_0[3] = {'w', 3, 0};								
 	
 	uint8_t motor_start[3] = {'w', 2, 1};	
 	uint8_t motor_stop[3] = {'w', 2, 0};			
 	
-	uint8_t read_levi[2] = {'r', 23};			//lijevi prekidac
-	uint8_t read_desni[2] = {'r',24};			//desni prekidac
-	uint8_t read_srednji[2] = {'r', 22};			//ravnotezni
+	uint8_t read_levi[2] = {'r', 23};			
+	uint8_t read_desni[2] = {'r',24};		
+	uint8_t read_srednji[2] = {'r', 22};		
 	
-	// pokretanje u smjeru kazaljke
+	
 	r = write(fd, set_p4_1, sizeof(set_p4_1));
 	if(r != sizeof(set_p4_1)){
 		fprintf(stderr, "ERROR: write went wrong!\n");
@@ -113,7 +104,7 @@ int main()
 			return 5;
 		}
 		
-		//middle
+		//srednji
 		r = write(fd, read_srednji, sizeof(read_srednji));
 		if(r != sizeof(read_srednji)){
 			fprintf(stderr, "ERROR: write went wrong!\n");
@@ -147,13 +138,11 @@ int main()
 				r = write(fd, set_p4_0, sizeof(set_p4_0));
 				if(r != sizeof(set_p4_0)){
 				fprintf(stderr, "ERROR: write went wrong!\n");
-				//return 4;
 				}
 				
 				r = write(fd, set_p3_1, sizeof(set_p3_1));
 				if(r != sizeof(set_p3_1)){
 				fprintf(stderr, "ERROR: write went wrong!\n");
-				//return 4;
 				}
 				
 				smer_kazaljke = 0;
@@ -187,52 +176,6 @@ int main()
 		usleep(500000);
 			
 	}
-
-	//provjera
-	/*if(rd_val || rd_val2 || rd_val3){
-		write(fd, fifth_command, sizeof(fifth_command));
-		if(rd_val){		//lijevi
-			printf("Levi prekidac aktivan!\n");
-			printf("\nCekam 2 sekunde...\n");
-			sleep(2);
-			
-			//break;
-		}
-		if(rd_val2){
-			printf("Desni prekidac aktivan!\n");
-			
-			r = write(fd, reverse_fir_command, sizeof(reverse_fir_command));
-			if(r != sizeof(reverse_fir_command)){
-			fprintf(stderr, "ERROR: write went wrong!\n");
-			return 4;
-			}
-			
-			r = write(fd, reverse_sec_command, sizeof(reverse_sec_command));
-			if(r != sizeof(reverse_sec_command)){
-			fprintf(stderr, "ERROR: write went wrong!\n");
-			return 4;
-			}
-		
-			sleep(2); 
-			//break;
-		}
-		
-		if(rd_val3){
-			printf("Srednji prekidac aktivan!\n");
-			printf("\nCekam 2 sekunde...\n");
-			sleep(2);
-			//break;
-			
-		}
-						
-	
-		}
-		//ponovo pokretanje motora
-		printf("\n Proslo dve sekunde motor ponovo rece.\n");
-		write(fd, third_command, sizeof(third_command));
-		usleep(2);
-			
-	}*/
 
 }
 	close(fd);

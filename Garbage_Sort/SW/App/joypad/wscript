@@ -17,9 +17,7 @@ import waflib
 
 one_file_programs = [
     'joy_node.c',
-    'routine_node.c',
     'wiper_node.c',
-    'stepper_node.c',
 ]
 
 def options(opt):

@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <linux/joystick.h>
 #include <sys/ioctl.h>
@@ -5,63 +6,76 @@
 #include <fcntl.h>
 #include <zmq.h>
 #include <errno.h>
-#include <string.h>
 
 #include "common.h"
 
-// 0.0.0.0 znaci da prihvata konekcije sa bilo koje IP adrese u mrezi
 #define ZMQ_ENDPOINT "tcp://0.0.0.0:5555"
 
 int main() {
-    // --- 1. ZeroMQ Setup ---
-    void* context = zmq_ctx_new();
-    void* publisher = zmq_socket(context, ZMQ_PUB);
-    if(zmq_bind(publisher, ZMQ_ENDPOINT) != 0){
-        perror("ZMQ Bind failed");
-        return 1;
-    }
+	// Initialize ZeroMQ context and PUSH socket
+	void* context = zmq_ctx_new(); 
+	if(!context){
+		perror("Failed to create ZeroMQ context");
+		return 1;
+	}
+	void* publisher = zmq_socket(context, ZMQ_PUB);
+	if(!publisher){
+		perror("Failed to create ZeroMQ PUB socket");
+		zmq_ctx_destroy(context);
+		return 1;
+	}
+	if(zmq_bind(publisher, ZMQ_ENDPOINT) != 0){
+		perror("Failed to bind ZeroMQ PUB socket");
+		zmq_close(publisher);
+		zmq_ctx_destroy(context);
+		return 1;
+	}
 
-    // --- 2. Otvaranje Dzojstika ---
-    int js_fd = open("/dev/input/js0", O_RDONLY);
-    if(js_fd == -1){
-        perror("Nema dzojstika na /dev/input/js0");
-        return 1;
-    }
+	int js_fd;
+	int num_of_axes = 0;
+	int num_of_buttons = 0;
 
-    printf("Joy Node pokrenut. Cekam pritisak na tastere...\n");
+	// Open the joystick device file in read-only mode
+	js_fd = open("/dev/input/js0", O_RDONLY);
+	if(js_fd == -1){
+		perror("Error opening joystick device");
+		return 1;
+	}
 
-    while(1){
-        struct js_event js;
+	ioctl(js_fd, JSIOCGAXES, &num_of_axes);
+	ioctl(js_fd, JSIOCGBUTTONS, &num_of_buttons);
 
-        // Citanje dogadjaja sa dzojstika
-        if (read(js_fd, &js, sizeof(struct js_event)) != sizeof(struct js_event)) {
-            perror("Greska pri citanju dzojstika");
-            break;
-        }
+	if(num_of_buttons < N_BUTTONS){
+		fprintf(stderr, "ERROR: Strange joystick with %d buttons! %d buttons are needed!\n", num_of_buttons, N_BUTTONS);
+		return 1;
+	}
 
-        // Proveravamo da li je dogadjaj "pritisak dugmeta"
-        // js.type & ~JS_EVENT_INIT sluzi da preskocimo pocetno stanje dzojstika
-        if ((js.type & ~JS_EVENT_INIT) == JS_EVENT_BUTTON) {
-            
-            // Provera da li je indeks dugmeta u opsegu niza (N_BUTTONS je 4)
-            if (js.number < N_BUTTONS) {
-                // Ako je js.value == 1, dugme je pritisnuto. Ako je 0, pusteno je.
-                buttons[js.number] = js.value;
-                
-                // Debug ispis da vidis u terminalu sta se desava
-                if (js.value == 1) {
-                    printf("Pritisnuto dugme ID: %d\n", js.number);
-                }
+	while(1){
+		struct js_event js_event_data;
 
-                // --- 3. Slanje stanja preko mreze ---
-                // Saljemo ceo niz 'buttons' (svih 4 bajta)
-                zmq_send(publisher, buttons, N_BUTTONS, 0);
-            }
-        }
-    }
+		if(read(js_fd, &js_event_data, sizeof(struct js_event)) != sizeof(struct js_event)){
+			perror("Error reading joystick event");
+			break;
+		}
 
-    close(js_fd);
-    zmq_close(publisher);
-    zmq_ctx_destroy(context);
-    return 0;
+		if(js_event_data.type & JS_EVENT_BUTTON){
+			if(js_event_data.number < N_BUTTONS){
+				buttons[js_event_data.number] = js_event_data.value;
+				
+				print_buttons("joy_node publishing buttons");
+
+				if(zmq_send(publisher, buttons, sizeof(buttons), 0) == -1){
+					perror("Failed to publish buttons");
+				}
+			}
+		 } 
+	}
+
+	close(js_fd);
+
+
+	zmq_close(publisher);
+	zmq_ctx_destroy(context);
+
+	return 0;
 }

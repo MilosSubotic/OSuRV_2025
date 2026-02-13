@@ -5,164 +5,274 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <stdlib.h>
-#include <stdint.h>
 
 #include "common.h"
 
-#define ZMQ_ENDPOINT "tcp://rpi-controls.local:5555" // Ili IP adresa
+// Hostname/IP of publisher (joy_node or routine_node).
+#define ZMQ_ENDPOINT "tcp://127.0.0.1:5555"
+
 #define DEV_FN "/dev/gpio_stream"
 
-// Stanja u kojima se sistem moze naci
-enum State {
-    ST_IDLE,        // Motor stoji
-    ST_GOING_LEFT,  // Putuje ka levom (23)
-    ST_GOING_RIGHT, // Putuje ka desnom (24)
-    ST_GOING_MIDDLE // Putuje ka srednjem (22)
-};
 
-int current_state = ST_IDLE;
-int last_known_side = 0; // 0 = bili smo levo, 1 = bili smo desno (da znamo kako do sredine)
+// GPIO pinovi
+#define MOTOR_EN 2    //ukljuci iskljuci motor
+#define MOTOR_PIN3 3	// kontrola smera - levo
+#define MOTOR_PIN4 4	// kontrola smera - desno
+#define SENSOR_SREDINA 22
+#define SENSOR_LEVO 23
+#define SENSOR_DESNO 24
 
-// --- Funkcije za hardver ---
+// Pozicije
+#define POS_NEPOZNATO 0
+#define POS_LEVO 1
+#define POS_SREDINA 2
+#define POS_DESNO 3
 
-// Ocitava vrednost pina (1 ili 0)
-int gpio_read(int fd, int pin) {
-    uint8_t req[2] = {'r', (uint8_t)pin};
-    uint8_t val = 0;
-    if(write(fd, req, 2) != 2) return 0;
-    usleep(100); // Kratka pauza da drajver stigne da obradi
-    if(read(fd, &val, 1) != 1) return 0;
-    return val; // Vraca 1 ako je pritisnut, 0 ako nije
+// Globalne promenljive za stanje
+int current_position = POS_NEPOZNATO;
+int target_position = POS_NEPOZNATO;
+int motor_running = 0;
+
+int gpio_write(int fd, uint8_t pin, uint8_t value) {
+	uint8_t pkg[3];
+	pkg[0] = 'w';
+	pkg[1] = pin;
+	pkg[2] = value;
+
+	if(write(fd, &pkg, 3) != 3){
+		perror("Failed to write to GPIO");
+		return -1;
+	}
+	return 0;
 }
 
-// Upisuje vrednost na pin
-void gpio_write(int fd, int pin, int val) {
-    uint8_t pkg[3] = {'w', (uint8_t)pin, (uint8_t)val};
-    write(fd, pkg, 3);
+int gpio_read(int fd, uint8_t pin) {
+	uint8_t cmd[2];
+	cmd[0] = 'r';
+	cmd[1] = pin;
+	
+	if(write(fd, cmd, 2) != 2){
+		perror("Failed to write read command to GPIO");
+		return -1;
+	}
+	
+	usleep(100); 
+	
+	uint8_t value = 0;
+	if(read(fd, &value, 1) != 1){
+		perror("Failed to read from GPIO");
+		return -1;
+	}
+	
+	return value;
 }
 
-void motor_stop(int fd) {
-    gpio_write(fd, 2, 0); // Enable = 0
+void motor_stop(int gpio_fd) {
+	gpio_write(gpio_fd, MOTOR_EN, 0);
+	motor_running = 0;
+	printf("Motor ZAUSTAVLJEN\n");
 }
 
-void motor_move_left(int fd) {
-    // Podesi smer (CCW)
-    gpio_write(fd, 3, 1);
-    gpio_write(fd, 4, 0);
-    // Start (Enable = 1)
-    gpio_write(fd, 2, 1);
+void motor_start_cw(int gpio_fd) {
+	// Smer kazaljke (CW): pin4=1, pin3=0
+	gpio_write(gpio_fd, MOTOR_PIN4, 1);
+	gpio_write(gpio_fd, MOTOR_PIN3, 0);
+	gpio_write(gpio_fd, MOTOR_EN, 1);
+	motor_running = 1;
+	printf("Motor pokrenut CW (ka DESNO)\n");
 }
 
-void motor_move_right(int fd) {
-    // Podesi smer (CW)
-    gpio_write(fd, 3, 0);
-    gpio_write(fd, 4, 1);
-    // Start (Enable = 1)
-    gpio_write(fd, 2, 1);
+void motor_start_ccw(int gpio_fd) {
+	// Suprotno od kazaljke (CCW): pin4=0, pin3=1
+	gpio_write(gpio_fd, MOTOR_PIN4, 0);
+	gpio_write(gpio_fd, MOTOR_PIN3, 1);
+	gpio_write(gpio_fd, MOTOR_EN, 1);
+	motor_running = 1;
+	printf("Motor pokrenut CCW (ka LEVO)\n");
 }
 
-// --- Main ---
+// Provera trenutne pozicije na osnovu senzora
+int check_current_position(int gpio_fd) {
+	
+	int sensor_levo = gpio_read(gpio_fd, SENSOR_LEVO);
+	int sensor_sredina = gpio_read(gpio_fd, SENSOR_SREDINA);
+	int sensor_desno = gpio_read(gpio_fd, SENSOR_DESNO);
+	
+	if(sensor_levo > 0) {
+		printf("Pritisnut prekidac levo-pin:23.\n");
+		return POS_LEVO;
+	}
+	if(sensor_sredina > 0) {
+		printf("Pritisnut prekidac srednji-pin:22.\n");
+		return POS_SREDINA;
+	}
+	if(sensor_desno > 0) {
+		printf("Pritisnut prekidac desni-pin:24.\n");
+		return POS_DESNO;
+	}
+	
+	return POS_NEPOZNATO;
+}
 
+// Pokretanje motora ka cilju
+void move_to_target(int gpio_fd) {
+	if(current_position == target_position) {
+		// Vec smo na cilju
+		if(motor_running) {
+			motor_stop(gpio_fd);
+		}
+		return;
+	}
+	
+	printf("Pomeranje: %d -> %d\n", current_position, target_position);
+	
+	// Određivanje smera kretanja
+	if(target_position == POS_DESNO) {
+		// Idemo ka DESNO
+		motor_start_cw(gpio_fd);
+	}
+	else if(target_position == POS_LEVO) {
+		// Idemo ka LEVO
+		motor_start_ccw(gpio_fd);
+	}
+	else if(target_position == POS_SREDINA) {
+		// Idemo ka SREDINI
+		if(current_position == POS_LEVO) {
+			motor_start_cw(gpio_fd); // Sa LEVO ka SREDINA je CW
+		} else if(current_position == POS_DESNO) {
+			motor_start_ccw(gpio_fd); // Sa DESNO ka SREDINA je CCW
+		} else {
+			// Ako ne znamo gde smo, idemo najpre ka sredini u CW smeru
+			motor_start_cw(gpio_fd);
+		}
+	}
+}
+
+const char* position_name(int pos) {
+	switch(pos) {
+		case POS_LEVO: 
+			return "LEVO";
+		case POS_SREDINA: 
+			return "SREDINA";
+		case POS_DESNO: 
+			return "DESNO";
+		default: 
+			return "NEPOZNATO";
+	}
+}
 int main() {
-    // 1. Otvaranje drajvera
-    int gpio_fd = open(DEV_FN, O_RDWR);
-    if(gpio_fd < 0){
-        perror("Failed to open GPIO driver");
-        return 1;
-    }
+//Otvaranje GPIO drajver
+	int gpio_fd = open(DEV_FN, O_RDWR);
+	if(gpio_fd < 0){
+		perror("Failed to open GPIO driver");
+		return 1;
+	}
+//Inicijalizacija ZeroMQ
+	void* context = zmq_ctx_new();
+	if(!context){
+		perror("Failed to create ZeroMQ context");
+		return 1;
+	}
+	void* subscriber = zmq_socket(context, ZMQ_SUB);
+	if(!subscriber){
+		perror("Failed to create ZeroMQ socket");
+		zmq_ctx_destroy(context);
+		return 1;
+	}
+	if(zmq_connect(subscriber, ZMQ_ENDPOINT) != 0){
+		perror("Failed to connect ZeroMQ socket");
+		zmq_close(subscriber);
+		zmq_ctx_destroy(context);
+		return 1;
+	}
+	if(zmq_setsockopt(subscriber, ZMQ_SUBSCRIBE, "", 0) != 0){  
+		perror("Failed to set ZMQ_SUBSCRIBE");
+		zmq_close(subscriber);
+		zmq_ctx_destroy(context);
+		return 1;
+	}
 
-    // 2. ZeroMQ Setup
-    void* context = zmq_ctx_new();
-    void* subscriber = zmq_socket(context, ZMQ_SUB);
-    zmq_connect(subscriber, ZMQ_ENDPOINT);
-    zmq_setsockopt(subscriber, ZMQ_SUBSCRIBE, "", 0);
+	printf("Connected and listening on %s...\n", ZMQ_ENDPOINT);
+	
+	  motor_stop(gpio_fd);
+	
+	// Provera pocetne pozicije - da znamo u prvoj iteraciji gde se nalazimo
+	current_position = check_current_position(gpio_fd);
+	printf("Pocetna pozicija: %s\n", position_name(current_position));
 
-    printf("Wiper Node spreman. Cekam komande...\n");
+	/*
+	currect_position - prethodna pozicija
+	new_position -  pozicija u ovom trenutku
+	*/
 
-    while(1){
-        // --- A. Prijem komandi (Non-blocking) ---
-        zmq_msg_t msg;
-        zmq_msg_init(&msg);
-        int bytes = zmq_msg_recv(&msg, subscriber, ZMQ_DONTWAIT);
-        
-        if(bytes == N_BUTTONS){
-            memcpy(buttons, zmq_msg_data(&msg), bytes);
-            
-            // Logika za promenu stanja na osnovu dugmeta
-            // Koristimo "else if" da ne bi primio dve komande odjednom
-            
-            if(buttons[BTN_IDI_LEVO]) { 
-                printf("Komanda: IDI LEVO (ka pinu 23)\n");
-                current_state = ST_GOING_LEFT;
-            }
-            else if(buttons[BTN_IDI_DESNO]) {
-                printf("Komanda: IDI DESNO (ka pinu 24)\n");
-                current_state = ST_GOING_RIGHT;
-            }
-            else if(buttons[BTN_IDI_SREDINA]) {
-                printf("Komanda: IDI NA SREDINU (ka pinu 22)\n");
-                current_state = ST_GOING_MIDDLE;
-            }
-        }
-        zmq_msg_close(&msg);
+	while(1){
+		zmq_msg_t msg;
+		zmq_msg_init(&msg);
+		int bytes = zmq_msg_recv(&msg, subscriber, ZMQ_DONTWAIT); // Non-blocking receive.
+		if(bytes == N_BUTTONS){
+			memcpy(buttons, zmq_msg_data(&msg), bytes); 
 
-        // --- B. Citanje Senzora ---
-        int sw_levo = gpio_read(gpio_fd, 23);
-        int sw_sred = gpio_read(gpio_fd, 22);
-        int sw_desno = gpio_read(gpio_fd, 24);
+			print_buttons("wiper_node recv buttons");
 
-        // Azuriranje "poslednje poznate strane" (bitno za sredinu)
-        if (sw_levo) last_known_side = 0; // Leva strana
-        if (sw_desno) last_known_side = 1; // Desna strana
+		// Postavljanje ciljne pozicije na osnovu pritisnutog dugmeta
+			if(buttons[BUTTON_SREDINA]) {
+				if(target_position != POS_SREDINA) {
+					printf("Korisnik je pritisnuo: SREDINA \n");
+					target_position = POS_SREDINA;
+				}
+			}
+			else if(buttons[BUTTON_DESNO]) {
+				if(target_position != POS_DESNO) {
+					printf("Korisnik je pritisnuo: DESNO \n");
+					target_position = POS_DESNO;
+				}
+			}
+			else if(buttons[BUTTON_LEVO]) {
+				if(target_position != POS_LEVO) {
+					printf("Korisnik je pritisnuo: LEVO \n");
+					target_position = POS_LEVO;
+				}
+			}
+		}
+		zmq_msg_close(&msg);
+		
+		// Provera trenutne pozicije
+		int new_position = check_current_position(gpio_fd);
+		
+		// Ažuriranje pozicije ako smo na senzoru
+		if(new_position != POS_NEPOZNATO) {
+			if(new_position != current_position) {
 
-        // --- C. Izvrsavanje (State Machine) ---
-        
-        switch(current_state) {
-            case ST_IDLE:
-                motor_stop(gpio_fd);
-                break;
+				current_position = new_position;
+				printf("Nova pozicija: %s\n", position_name(current_position));
+			
+				if(motor_running) {
+					printf("Stigao na senzor %s\n", position_name(current_position));
+   					motor_stop(gpio_fd);		
+				}	
+			
+			}
+			
+			// Ako smo stigli na cilj, zaustavi motor
+			if(current_position == target_position && motor_running) {
+				printf("STIGLI SMO NA CILJ: %s\n", position_name(current_position));
+				motor_stop(gpio_fd);
+			}
+		}
+		
+		// Ako nismo na cilju, nastavi kretanje
+		if(target_position != POS_NEPOZNATO && current_position != target_position && !motor_running) {
+			move_to_target(gpio_fd);
+		}
+		
+		usleep(10000);
+	}
+    motor_stop(gpio_fd);  
+	zmq_close(subscriber);
+	zmq_ctx_destroy(context);
+	
+	close(gpio_fd);
 
-            case ST_GOING_LEFT:
-                if(sw_levo) {
-                    printf("Stigao na LEVI cilj (23). Stajem.\n");
-                    current_state = ST_IDLE;
-                } else {
-                    motor_move_left(gpio_fd);
-                }
-                break;
-
-            case ST_GOING_RIGHT:
-                if(sw_desno) {
-                    printf("Stigao na DESNI cilj (24). Stajem.\n");
-                    current_state = ST_IDLE;
-                } else {
-                    motor_move_right(gpio_fd);
-                }
-                break;
-
-            case ST_GOING_MIDDLE:
-                if(sw_sred) {
-                    printf("Stigao na SREDNJI cilj (22). Stajem.\n");
-                    current_state = ST_IDLE;
-                } 
-                else {
-                    // Ako nismo na sredini, moramo znati odakle dolazimo
-                    if(last_known_side == 0) {
-                        // Bili smo levo, znaci moramo desno da nadjemo sredinu
-                        motor_move_right(gpio_fd);
-                    } else {
-                        // Bili smo desno, znaci moramo levo da nadjemo sredinu
-                        motor_move_left(gpio_fd);
-                    }
-                }
-                break;
-        }
-
-        usleep(10000); // 10ms loop delay
-    }
-
-    close(gpio_fd);
-    zmq_close(subscriber);
-    zmq_ctx_destroy(context);
-    return 0;
+	return 0;
 }
+
