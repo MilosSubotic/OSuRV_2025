@@ -25,17 +25,17 @@ struct_packed pkg_m2s_t {
 };
 
 struct_packed pkg_s2m_t {
-	pkg_magic_t magic;
-	struct_packed {
-		i32 enc;
-		i16 speed_i;
-		i16 speed_o;
+    pkg_magic_t magic;
+    struct_packed {
+        i32 enc;
+        i16 speed_i;
+        i16 speed_o;
         i16 steering_angle_i;
         i16 steering_angle_o;
-		//u8 cfg;
-		float ultrasound_distance; //NOVO! Distance in cm (float?)
-	} payload;
-	pkg_crc_t crc;
+        //u8 cfg;
+        u32 ultrasound_pulse; // Prima sirovi pulseIn (mikrosekunde)
+    } payload;
+    pkg_crc_t crc;
 };
 
 

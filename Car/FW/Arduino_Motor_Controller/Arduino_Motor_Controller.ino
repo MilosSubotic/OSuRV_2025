@@ -516,16 +516,17 @@ ISR(PCINT1_vect) {
 
 ///////////////////////////////////////////////////////////////////////////////
 //NOVO
-float getDistanceCM() {
+uint32_t getPulseDuration() {
   digitalWrite(trigPin, LOW);
   delayMicroseconds(2);
   digitalWrite(trigPin, HIGH);
   delayMicroseconds(10);
   digitalWrite(trigPin, LOW);
 
-  float duration = pulseIn(echoPin, HIGH);
-  float distance = duration * 0.0343 / 2; // distance in CM
-  return distance;
+  // pulseIn vraća unsigned long (uint32_t), što predstavlja mikrosekunde
+  uint32_t duration = pulseIn(echoPin, HIGH);
+  
+  return duration;
 }
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -805,7 +806,7 @@ void send_pkg() {
 
   ///////////////////////////////////////////////////////////////////////////////
   //NOVO
-  p.payload.ultrasound_distance = getDistanceCM();
+  p.payload.ultrasound_pulse = getPulseDuration();
   ///////////////////////////////////////////////////////////////////////////////
   p.crc = CRC16().add(p.payload).get_crc();
 
@@ -835,15 +836,14 @@ void loop() {
   
   ///////////////////////////////////////////////////////////////////////////////
   //NOVO
+  /* Izbaceno zato sto racunanje radimo na Pi-u
   float distance = getDistanceCM();
-  //Serial.print("Ultrasonic distance: ");
-  //Serial.println(distance);
 
   if (distance > 0 && distance < 10) {   // STOPS at 10 cm
     set_target_speed(0);                 // stop BLDC
     set_target_steering_angle(90);       // center steering
-    //Serial.println("Obstacle detected — STOP");
   }
+    */
   ///////////////////////////////////////////////////////////////////////////////
 
   // Send slower than reading.
