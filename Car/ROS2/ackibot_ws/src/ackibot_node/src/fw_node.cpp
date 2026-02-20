@@ -252,6 +252,7 @@ void FW_Node::cmd_vel__cb(const geometry_msgs::msg::TwistStamped::SharedPtr msg)
 void FW_Node::repeater__cb() {
 	watchdog_dec();
 	watchdog_apply();
+	front_sensor_check();
 
 	write_pkg();
 }
@@ -402,8 +403,10 @@ void FW_Node::read_pkg() {
 
 
 	joint_state__pub->publish(std::move(msg));
+	
+}
 
-	//NOVO
+void FW_Node::front_sensor_check(){
 	// OBRADA ULTRAZVUČNOG SENZORA
     
     // Konverzija: mikrosekunde (uint32) -> centimetri (float)
@@ -425,12 +428,8 @@ void FW_Node::read_pkg() {
 		{
 			RCLCPP_WARN(this->get_logger(), "Emergency Stop! Distance: %.2f cm", ultrasound_distances[0]);
         	this->speed = 0;
-			write_pkg();
+			//write_pkg();
 		}
     }
 }
-/*
-void FW_Node::front_sensor_check(){
-
-}*/
 

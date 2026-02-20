@@ -80,6 +80,7 @@ private:
 	void repeater__cb();
 	std::vector<u8> wr_buf;
 	void write_pkg();
+	void front_sensor_check();
 
 
 	std::thread read__thread;
