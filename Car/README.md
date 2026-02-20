@@ -9,11 +9,12 @@ Infrastructure:
 -fw_pkgs.hpp is the packet structure (there is one copy in FW and one in ROS2/ackibot_node CHANGE BOTH!)
   -M2S is PI to NANO
   -S2M is NANO to PI
--
+-FW/Arduino_Motor_Controller/Arduino_Motor_Controller.ino is the file you upload to Arduino
+-ROS2/ackibot_ws/src/ackibot_node/src/fw_node.cpp is the file where you change PI instructions
 
+Possible problems with PI Wi-Fi:
+ Easiest is to connect PI to a Monitor and Wi-Fi and get IP from console. If it doesnt work, PING your PC from PI and it should now.
 
-
-  
 Start up procedure:
 -Turn on PI (Internal switch)
 -SSH to PI
