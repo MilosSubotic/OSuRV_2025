@@ -41,7 +41,7 @@ Prati ove korake tačnim redosledom kako bi izbegao greške u komunikaciji:
 1.  **Power On:** Uključi Raspberry Pi (Interni prekidač).
 2.  **Access:** Poveži se na Pi putem **SSH**.
 3.  **Scripts:** ```bash
-    cd ROS2/ackibot_ws_scripts
+    cd ROS2/ackibot_ws/scripts
     ./mars_joys.sh
     ```
 4.  **Controller:** Upali joypad kombinacijom tastera **RB + HOME**.
