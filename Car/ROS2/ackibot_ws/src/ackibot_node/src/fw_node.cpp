@@ -150,6 +150,7 @@ void FW_Node::watchdog_dec() {
 
 void FW_Node::watchdog_apply() {
 	if(watchdog_cnt == 0){
+		target_speed=0;
 		speed = 0;
 		steering_angle = 90;
 	}
@@ -178,14 +179,14 @@ void FW_Node::cmd_vel__cb(const geometry_msgs::msg::TwistStamped::SharedPtr msg)
 	//PRETVARA NORMALIZOVANE BRZINE U VREDNOSTI ZA MOTORE (-2047, 2047)//////////////////////////////////////////////////////////////////////
 
 	// [-1.0, 1.0] -> [reverse, forward]
-	speed = static_cast<i16>(cmd.linear.x*2047);
+	target_speed = static_cast<i16>(cmd.linear.x*2047);
 
 	// [1.0, -1.0] -> [left, right].
 	steering_angle = static_cast<i16>(((-cmd.angular.z + 1.0)/2.0 * 180));  //mapira ugaonu brzinu na uglove od 0 do 180
 
-	speed = 
+	target_speed = 
 		std::clamp(
-			speed,
+			target_speed,
 			i16(-MODULUS + 1), 
 			i16(MODULUS - 1)
 		);
@@ -251,9 +252,24 @@ void FW_Node::cmd_vel__cb(const geometry_msgs::msg::TwistStamped::SharedPtr msg)
 //callback funkcija koja periodicno proverava i azurira stanje motora i ako nisu stigle nove komande
 void FW_Node::repeater__cb() {
 	watchdog_dec();
-	watchdog_apply();
-	front_sensor_check();
+	int16_t final_speed = this->target_speed;
 
+	// EMERGENCY STOP LOGIKA
+    // Ako je prepreka bliža od 20cm (a nije 0, što može biti greška senzora)
+    if (ultrasound_distances[0] > 0.1f && ultrasound_distances[0] < 20.0f) {
+		//Ukoliko pokusava da se krece napred kocimo, moze da ide samo u rikverc
+		if (final_speed > 0)
+		{
+			RCLCPP_WARN(this->get_logger(), "Emergency Stop! Distance: %.2f cm", ultrasound_distances[0]);
+        	final_speed = 0;
+		}
+    }
+
+	if(watchdog_cnt == 0){
+		final_speed = 0;
+		this->steering_angle = 90;
+	}
+	this->speed=final_speed;
 	write_pkg();
 }
 
@@ -263,8 +279,8 @@ void FW_Node::write_pkg() {
 	pkg_m2s_t& p = *reinterpret_cast<pkg_m2s_t*>(wr_buf.data());
 	p.magic = PKG_MAGIC;
 	//postavlja trenutne brzine motora u paket
-	p.payload.speed = speed;
-	p.payload.steering_angle = steering_angle;
+	p.payload.speed = this->speed;
+	p.payload.steering_angle = this->steering_angle;
 	//postavlja rampu - koliko brzo motor treba da dostigne zadatu brzinu
 	//p.payload.ramp_rate_ms = 2000; // TODO
 
@@ -401,12 +417,13 @@ void FW_Node::read_pkg() {
 	// msg->position.push_back(tick_to_rad * p.payload.enc[R_WHEEL]);
 	msg->position.push_back(tick_to_rad * p.payload.enc);
 
+	this->front_sensor_check(p);
 
 	joint_state__pub->publish(std::move(msg));
 	
 }
 
-void FW_Node::front_sensor_check(){
+void FW_Node::front_sensor_check(const pkg_s2m_t & p){
 	// OBRADA ULTRAZVUČNOG SENZORA
     
     // Konverzija: mikrosekunde (uint32) -> centimetri (float)
@@ -419,17 +436,5 @@ void FW_Node::front_sensor_check(){
     auto message = std_msgs::msg::Float32MultiArray();
     message.data = ultrasound_distances; // Kopira ceo vektor u poruku
     ultrasound_pub->publish(message);
-
-    // EMERGENCY STOP LOGIKA
-    // Ako je prepreka bliža od 20cm (a nije 0, što može biti greška senzora)
-    if (ultrasound_distances[0] > 0.1f && ultrasound_distances[0] < 20.0f) {
-		//Ukoliko pokusava da se krece napred kocimo, moze da ide samo u rikverc
-		if (this->speed > 0)
-		{
-			RCLCPP_WARN(this->get_logger(), "Emergency Stop! Distance: %.2f cm", ultrasound_distances[0]);
-        	this->speed = 0;
-			//write_pkg();
-		}
-    }
 }
 

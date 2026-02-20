@@ -65,7 +65,7 @@ private:
 
 	LibSerial::SerialPort motor_ctrl_sensor_hub_serial;
 
-
+	i16 target_speed;
 	i16 speed;           // brzina kretanja napred/nazad (za BLDC)
 	i16 steering_angle;  // ugao skretanja volana (za servo)
 	u8 watchdog_cnt;
@@ -80,7 +80,7 @@ private:
 	void repeater__cb();
 	std::vector<u8> wr_buf;
 	void write_pkg();
-	void front_sensor_check();
+	void front_sensor_check(const pkg_s2m_t & p);
 
 
 	std::thread read__thread;
